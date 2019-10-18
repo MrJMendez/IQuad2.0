@@ -6,8 +6,8 @@ namespace IQuad2.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<User> users { get; set; }
-        public DbSet<UserType> userType { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<UserType> UserType { get; set; }
        
 
         public ApplicationDbContext()

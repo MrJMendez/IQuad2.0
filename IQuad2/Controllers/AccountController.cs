@@ -154,10 +154,11 @@ namespace IQuad2.Controllers
             {
                 var user = new ApplicationUser
                 {
-                    Fname = model.Fname,
-                    Lname = model.Lname,
+                    
                     UserName = model.Email,
                     Email = model.Email,
+                    Fname = model.Fname,
+                    Lname = model.Lname,
 
 
                 };
@@ -376,7 +377,13 @@ namespace IQuad2.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    Fname = model.Fname,
+                    Lname = model.Lname
+                };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
@@ -386,7 +393,7 @@ namespace IQuad2.Controllers
                         await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                         return RedirectToLocal(returnUrl);
                     }
-                }
+                 }
                 AddErrors(result);
             }
 

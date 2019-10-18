@@ -13,7 +13,7 @@ namespace IQuad2.Models
     public class User
     {
 
-        public string UserID { get; set; }
+        public string Id { get; set; }
 
         [Required]
         [StringLength(255)]

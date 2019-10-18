@@ -177,6 +177,10 @@
     <Compile Include="Migrations\201910161916376_InitialModel.Designer.cs">
       <DependentUpon>201910161916376_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910181619107_UpdateRegisterEntity.cs" />
+    <Compile Include="Migrations\201910181619107_UpdateRegisterEntity.Designer.cs">
+      <DependentUpon>201910181619107_UpdateRegisterEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -265,6 +269,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201910161916376_InitialModel.resx">
       <DependentUpon>201910161916376_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910181619107_UpdateRegisterEntity.resx">
+      <DependentUpon>201910181619107_UpdateRegisterEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
