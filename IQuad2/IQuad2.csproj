@@ -181,6 +181,14 @@
     <Compile Include="Migrations\201910181619107_UpdateRegisterEntity.Designer.cs">
       <DependentUpon>201910181619107_UpdateRegisterEntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910200434369_changesmade.cs" />
+    <Compile Include="Migrations\201910200434369_changesmade.Designer.cs">
+      <DependentUpon>201910200434369_changesmade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910200437381_ValuesIntoUserType.cs" />
+    <Compile Include="Migrations\201910200437381_ValuesIntoUserType.Designer.cs">
+      <DependentUpon>201910200437381_ValuesIntoUserType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -272,6 +280,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910181619107_UpdateRegisterEntity.resx">
       <DependentUpon>201910181619107_UpdateRegisterEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910200434369_changesmade.resx">
+      <DependentUpon>201910200434369_changesmade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910200437381_ValuesIntoUserType.resx">
+      <DependentUpon>201910200437381_ValuesIntoUserType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
