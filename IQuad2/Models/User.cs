@@ -29,8 +29,8 @@ namespace IQuad2.Models
         public string District { get; set; }
         public string Parish { get; set; }
         public string Street { get; set; }
-        public UserType userType { get; set; }
-        public string UserTypeId { get; set; }
+        public  UserType UserType { get; set; }
+        public int UserTypeId { get; set; }
 
     }
 }
