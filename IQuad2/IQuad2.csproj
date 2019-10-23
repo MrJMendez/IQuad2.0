@@ -198,6 +198,10 @@
     <Compile Include="Migrations\201910222239451_FixingUserTypeAndUsers.Designer.cs">
       <DependentUpon>201910222239451_FixingUserTypeAndUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910231944293_DataIntoUserType.cs" />
+    <Compile Include="Migrations\201910231944293_DataIntoUserType.Designer.cs">
+      <DependentUpon>201910231944293_DataIntoUserType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -308,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910222239451_FixingUserTypeAndUsers.resx">
       <DependentUpon>201910222239451_FixingUserTypeAndUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910231944293_DataIntoUserType.resx">
+      <DependentUpon>201910231944293_DataIntoUserType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

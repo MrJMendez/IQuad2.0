@@ -25,9 +25,9 @@ namespace IQuad2.Controllers
         public ActionResult Index()
         {
             //var users = _context.Users.ToList();
-           // var doctors = _context.Users.Where(x => x.UserTypeId == (int)UserTypeEnum.Doctor).ToList();
+            var doctors = _context.Users.Where(x => x.UserTypeId == (int)UserTypeEnum.Doctor).ToList();
 
-            return View(/*doctors*/);
+            return View(doctors);
         }
         public ActionResult Set_Appointment()
         {

@@ -15,7 +15,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Users</h2>48
+<h2>Users</h2>
 <p>
     @Html.ActionLink("Set_Appointment", "Set_Appointment", "Appointment", null, new { @class = "btn btn-primary" })
 </p>
@@ -34,7 +34,8 @@
             <tr>
 
                 <td> @user.Fname</td>
-                <td> @user.UserTypeId</td>
+                <td>@user.Lname</td>
+               
 
             </tr>
         }
