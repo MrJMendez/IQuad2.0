@@ -231,6 +231,16 @@
     <Content Include="Migrations\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Pictures\appointment.png" />
+    <Content Include="Pictures\clock.png" />
+    <Content Include="Pictures\doctor1.jpg" />
+    <Content Include="Pictures\doctor2.jpg" />
+    <Content Include="Pictures\doctor3.jpg" />
+    <Content Include="Pictures\Layer.png" />
+    <Content Include="Pictures\question-icon.png" />
+    <Content Include="Pictures\slider-1.jpg" />
+    <Content Include="Pictures\slider2 %282%29.jpg" />
+    <Content Include="Pictures\slider2.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -244,6 +254,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Home\Layer.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
