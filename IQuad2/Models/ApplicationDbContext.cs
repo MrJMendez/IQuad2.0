@@ -8,7 +8,10 @@ namespace IQuad2.Models
     {
         public DbSet<User> Users { get; set; }
         public DbSet<UserType> UserType { get; set; }
-       
+        public DbSet<Appointment> appointment { get; set; }
+        public DbSet<Specialties> specialities { get; set; }
+        public DbSet<DoctorSpecialty> doctorSpecialties { get; set; }
+        
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
