@@ -1,4 +1,4 @@
-﻿@model IQuad2.Models.Appointment
+﻿@model IQuad2.ViewModels.AppointmentViewModel
 @{
     ViewBag.Title = "Set Appointment";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,35 +8,41 @@
 @using (Html.BeginForm("Create", "Appointment"))
 {
 
+
     <div class="form-group">
 
-        @Html.LabelFor(m => m.Fname)
-        @Html.TextBoxFor(m => m.Fname, new { @class = "form-control" })
+        @Html.LabelFor(m => m.appointment.PurposeOfVisit)
+        @Html.TextAreaFor(m => m.appointment.PurposeOfVisit, new { @class = "form-control" })
     </div>
     <div class="form-group">
 
-        @Html.LabelFor(m => m.Lname)
-        @Html.TextBoxFor(m => m.Lname, new { @class = "form-control" })
+        @Html.LabelFor(m => m.appointment.Date)
+        @Html.TextBoxFor(m => m.appointment.Date, new { @class = "form-control" })
     </div>
     <div class="form-group">
 
-        @Html.LabelFor(m => m.PurposeOfVisit)
-        @Html.TextAreaFor(m => m.PurposeOfVisit, new { @class = "form-control" })
+        @Html.LabelFor(m => m.appointment.StartTime)
+        @Html.TextBoxFor(m => m.appointment.StartTime, new { @class = "form-control" })
     </div>
     <div class="form-group">
 
-        @Html.LabelFor(m => m.Date)
-        @Html.TextBoxFor(m => m.Date, new { @class = "form-control" })
+        @Html.LabelFor(m => m.appointment.EndTime)
+        @Html.TextBoxFor(m => m.appointment.EndTime, new { @class = "form-control" })
     </div>
     <div class="form-group">
 
-        @Html.LabelFor(m => m.StartTime)
-        @Html.TextBoxFor(m => m.StartTime, new { @class = "form-control" })
-    </div>
-    <div class="form-group">
+        <label>Doctors</label>
+        @Html.DropDownListFor(m => m.Doctor, new SelectList(Model.Doctor, "UserTypeId", "Fname"), "Select Doctor", new { @class = "form-control" })
 
-        @Html.LabelFor(m => m.EndTime)
-        @Html.TextBoxFor(m => m.EndTime, new { @class = "form-control" })
     </div>
+  
+
 }
 
+
+
+
+
+
+
+ 

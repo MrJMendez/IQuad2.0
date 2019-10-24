@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using IQuad2.Models;
+using IQuad2.ViewModels;
 
 
 namespace IQuad2.Controllers
@@ -24,19 +25,23 @@ namespace IQuad2.Controllers
         }
         public ActionResult Index()
         {
-            //var users = _context.Users.ToList();
-            var doctors = _context.Users.Where(x => x.UserTypeId == (int)UserTypeEnum.Doctor).ToList();
+          
 
-            return View(doctors);
+            return View();
         }
         public ActionResult Set_Appointment()
         {
-             
 
-            return View();
+              var viewModel = new AppointmentViewModel {
+
+                Doctor = _context.Users.Where(x => x.UserTypeId == (int)UserTypeEnum.Doctor).ToList(),  
+          };
+
+              return View(viewModel); 
+            
 
         }
-
+      
         
     }
 }

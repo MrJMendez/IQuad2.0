@@ -9,13 +9,10 @@ namespace IQuad2.Models
 {
     public class Appointment
     {
-        public int AppointNumber { get; set; }
         
-        [Display(Name = "First Name")]
-        public string Fname { get; set; }
-        [Display (Name = "Last Name")]
-        public string Lname { get; set; }
-
+     
+        public int Id { get; set; }
+       
         public string PatientId { get; set; }
 
         public string DoctorId { get; set; }
