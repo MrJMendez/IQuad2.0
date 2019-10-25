@@ -32,11 +32,14 @@
     <div class="form-group">
 
         <label>Doctors</label>
-        @Html.DropDownListFor(m => m.Doctor, new SelectList(Model.Doctor, "UserTypeId", "Id"), "Select Doctor", new { @class = "form-control" })
-               
+        @Html.DropDownListFor(m => m.Doctor, new SelectList(Model.Doctor, "UserTypeId", "Fname"), "Select Doctor", new { @class = "form-control" })
+
+
+
     </div>
+
     <button type="submit" class="btn btn-primary">Set Appointment</button>
-  
+
 
 }
 
@@ -46,4 +49,3 @@
 
 
 
- 

@@ -35,8 +35,9 @@ namespace IQuad2.Controllers
             var viewModel = new AppointmentViewModel {
 
                 Doctor = _context.Users.Where(x => x.UserTypeId == (int)UserTypeEnum.Doctor).ToList(),
-                //Id = _context.Users.Where(x=> x.Id ==)
-          };
+                // Id = _context.Users.Find("Id")
+        };
+           
 
               return View(viewModel); 
             
