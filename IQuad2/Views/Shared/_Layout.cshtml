@@ -9,12 +9,117 @@
 
 </head>
 <body>
+
+    <header>
+
+        <div class="container">
+            <div>
+
+                <div id="carousel " class="carousel slide">
+                    <ol class="carousel-indicators">
+
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class=" item active">
+                            <img src="~/pictures/slider2 (2).jpg" />
+
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <p>Don’t look further. This is your Doctor</p>
+                                    <h1>  WE ARE THE TEAM OF EXCELLENCE</h1>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+                            <img src="~/pictures/slider-2.jpg" />
+
+                            <div class="container">
+                                <div class="carousel-caption ">
+                                    <h1> WE CARE FOR YOU</h1>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <script>
+                $("#carousel").carousel(
+                    {
+                        interval: 2000
+                    });
+                </script>
+
+            </div>
+            <hr />
+        </div>
+        <br />
+
+
+
+    </header>
+
+
+
     @Html.Partial("_NavBar")
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="container">
+                <div class="row mb-5 element-animate">
+                    <div class="col-md-3 mb-5">
+                        <h3>Services</h3>
+                        <ul class="footer-link list-unstyled">
+                            <li><a href="#">Find a doctor</a></li>
+                            <li><a href="#">Procedures &amp; Treatments</a></li>
+                            <li><a href="#">Online Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-5">
+                        <h3>Latest News</h3>
+                        <ul class="footer-link list-unstyled">
+                            <li><a href="#">Health Care Professional News</a></li>
+                            <li><a href="#">Events &amp; Conferences</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-5">
+                        <h3>About</h3>
+                        <ul class="footer-link list-unstyled">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-5">
+                        <h3>Location &amp; Contact</h3>
+                        <p class="mb-5">134 Street Name, Kingston, Jamaica</p>
+
+                        <h4 class="text-uppercase mb-3 h6 text-white">
+                            Email
+                        </h4>
+                        <p class="mb-5"><a href="mailto:i-Quad@gmail.com">i-QuadMAS@gmail.com</a></p>
+
+                        <h4 class="text-uppercase mb-3 h6 text-white">
+                            Phone
+                        </h4>
+                        <p>+1 876 435 3533</p>
+
+                    </div>
+                </div>
+
+                <div class="row pt-md-3 element-animate">
+                    <div class="col-md-12">
+                        <hr class="border-t">
+                    </div>
+                    <p>&copy; 2019 - I-Quad</p>
+                </div>
+            </div>
         </footer>
     </div>
 
@@ -25,58 +130,6 @@
 
 
 
-
-    <!--> Home Page Slider  </!-->
-
-
-    <div class="container">
-        <div>
-
-            <div id="carousel " class="carousel slide">
-                <ol class="carousel-indicators">
-
-                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel" data-slide-to="1"></li>
-                </ol>
-
-                <div class="carousel-inner">
-                    <div class=" item active">
-                        <img src="~/Pictures/slider2 (2).jpg" />
-
-                        <div class="container">
-                            <div class="carousel-caption">
-                                <p>Don’t look further. This is your Doctor</p>
-                                <h1>  WE ARE THE TEAM OF EXCELLENCE</h1>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="item">
-                        <img src="~/pictures/slider-2.jpg" />
-
-                        <div class="container">
-                            <div class="carousel-caption ">
-                                <h1> WE CARE FOR YOU</h1>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-            <script>
-                $("#carousel").carousel(
-                    {
-                        interval: 2000
-                    });
-            </script>
-
-        </div>
-        <hr />
-    </div>
-    <br />
 
 </body>
 </html>
