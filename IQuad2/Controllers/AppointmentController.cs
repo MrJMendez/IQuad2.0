@@ -37,7 +37,6 @@ namespace IQuad2.Controllers
                 Doctor = _context.Users.Where(x => x.UserTypeId == (int)UserTypeEnum.Doctor).ToList(),
                 // Id = _context.Users.Find("Id")
         };
-           
 
               return View(viewModel); 
             
@@ -49,6 +48,11 @@ namespace IQuad2.Controllers
             _context.appointment.Add(viewModel.appointment);
             _context.SaveChanges();
             return RedirectToAction("Appointment_Set", "Appointment");
+        }
+        public ActionResult Appointment_Set()
+        {
+
+            return View();
         }
       
         

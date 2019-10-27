@@ -19,6 +19,7 @@ namespace IQuad2.Models
         [Display(Name = "Purpose of Visit")]
         public string PurposeOfVisit { get; set; }
         public DateTime Date { get; set; }
+
         [Display(Name = "Start Time")]
         public TimeSpan StartTime { get; set; }
         [Display(Name = "End Time")]
