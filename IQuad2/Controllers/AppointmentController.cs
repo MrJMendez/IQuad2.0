@@ -32,14 +32,23 @@ namespace IQuad2.Controllers
         public ActionResult Set_Appointment()
         {
 
-              var viewModel = new AppointmentViewModel {
+            var viewModel = new AppointmentViewModel {
 
-                Doctor = _context.Users.Where(x => x.UserTypeId == (int)UserTypeEnum.Doctor).ToList(),  
-          };
+                Doctor = _context.Users.Where(x => x.UserTypeId == (int)UserTypeEnum.Doctor).ToList(),
+                // Id = _context.Users.Find("Id")
+        };
+           
 
               return View(viewModel); 
             
 
+        }
+        public ActionResult Create(AppointmentViewModel viewModel)
+        {
+
+            _context.appointment.Add(viewModel.appointment);
+            _context.SaveChanges();
+            return RedirectToAction("Appointment_Set", "Appointment");
         }
       
         

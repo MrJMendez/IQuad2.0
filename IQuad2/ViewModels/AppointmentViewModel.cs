@@ -6,10 +6,14 @@ using System.Web;
 
 namespace IQuad2.ViewModels
 {
-    public class AppointmentViewModel
+    public class AppointmentViewModel 
     {
         public IEnumerable<User> Doctor { get; set; } 
         public Appointment appointment { get; set; }
+        //public User Id { get; set; }
+
+     
+
         
     }
 }
