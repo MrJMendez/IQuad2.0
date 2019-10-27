@@ -20,8 +20,8 @@
 
                     <div class="container">
                         <div class="carousel-caption">
-                            <p style=" font-size:15px; 'Agency FB'"><b>Don’t look further. This is your Doctor</b></p>
-                            <h1 style="font-family: 'Agency FB'" ><b>  WE ARE THE TEAM OF EXCELLENCE</b></h1>
+                            <p style=" font-size:15px;'Agency FB'"><b>Don’t look further. This is your Doctor</b></p>
+                            <h1 style="font-family:'Agency FB'" ><b>  WE ARE THE TEAM OF EXCELLENCE</b></h1>
                         </div>
                     </div>
 
@@ -96,10 +96,6 @@
             </div>
         </div>
 
-
-
-
-
         <div class="col-md-3 p-0 three-col element-animate">
             <div class="col-inner p-xl-5 p-lg-5 p-md-4 p-sm-4 p-4">
                 <img src="~/pictures/icon3_0001_.jpg" alt="Image Placeholder" class="img-fluid">
@@ -109,7 +105,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="col-md-3 p-0 three-col element-animate">
             <div class="col-inner p-xl-5 p-lg-5 p-md-4 p-sm-4 p-4">
@@ -254,39 +249,39 @@
 
                 <div class="row">
                     <div class="col-lg-12 d-flex flex-column">
-                        <input name="patient-name" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Patient Name'" class="form-control mt-20" required="" type="text">
-                    </div><br />
-
-                    <div class="col-lg-6 d-flex flex-column">
-                        <br />
-                        <input name="phone" placeholder="Phone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'" class="form-control mt-20" required="" type="text">
+                        <input  style="border-color:black;" name="patient-name" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Patient Name'" class="form-control mt-20" required="" type="text">
                     </div>
 
-                    <div class="col-lg-6 d-flex flex-column">
+                    <div class="col-lg-12 d-flex flex-column">
                         <br />
-                        <input name="email" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" class="form-control mt-20" required="" type="email">
+                        <input  style="border-color:black;" name="phone" placeholder="Phone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'" class="form-control mt-20" required="" type="text">
                     </div>
 
-                    <div class="col-lg-6 d-flex flex-column">
+                    <div class="col-lg-12 d-flex flex-column">
                         <br />
-                        <input name="dob" placeholder="Date of birth" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Date of birth'" class="form-control mt-20" required="" type="text" id="datepicker">
+                        <input  style="border-color:black;" name="email" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" class="form-control mt-20" required="" type="email">
                     </div>
 
-                    <div class="col-lg-6 d-flex flex-column">
+                    <div class="col-lg-12 d-flex flex-column">
                         <br />
-                        <input name="appoinment-date" placeholder="Appoinment date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Appoinment date'" class="form-control mt-20" required="" type="text" id="datepicker2">
-                    </div><br />
+                        <input  style="border-color:black;" name="dob" placeholder="Date of birth" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Date of birth'" class="form-control mt-20" required="" type="text" id="datepicker">
+                    </div>
+
+                    <div class="col-lg-12 d-flex flex-column">
+                        <br />
+                        <input  style="border-color:black;" name="appoinment-date" placeholder="Appoinment date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Appoinment date'" class="form-control mt-20" required="" type="text" id="datepicker2">
+                    </div>
 
                     <div class="col-lg-12 flex-column">
                         <br />
-                        <textarea rows="5" class="form-control mt-20" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+                        <textarea  style="border-color:black;" rows="5" class="form-control mt-20" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
                     </div>
 
                     <div class="col-lg-12 d-flex justify-content-end send-btn">
                         <br />
-                        <button color="red">Confirm booking</button>
+                        <button class="btn btn-primary" type="submit">Confirm Booking</button>
                     </div>
-
+                    <br />
                     <div class="alert-msg"></div>
                 </div>
 
@@ -298,10 +293,19 @@
                 <img src="~/Pictures/clock.png" />
                 <h3><b>Opening Hours</b></h3>
                 <ul class="colm-1">
-                    <li><p>Monday - Friday <span>:</span>  8:00am to 05:00pm</p></li>
-                    <li><p>Saturday   <span>:</span>  9:00am to 03:00pm</p></li>
-                    <li><p>Sunday    <span>:</span>     closed</p></li>
+                    <li><p>Sunday    <span>:</span>       closed</p></li>
+                    <li><p>Monday    <span>:</span>  8:00am to 05:00pm</p></li>
+                    <li><p>Tuesday   <span>:</span>  9:00am to 05:00pm</p></li>
+                    <li><p>Wednesday <span>:</span>  8:00am to 04:00pm</p></li>
+                    <li><p>Thursday  <span>:</span>  9:00am to 05:00pm</p></li>
+                    <li><p>Friday    <span>:</span>  8:00am to 02:00pm</p></li>
+                    <li><p>Saturday  <span>:</span>  9:00am to 03:00pm</p></li>
+
+                    <p><b>We are open on holidays.......</b></p>
                 </ul>
+
+
+                
             </div>
         </div>
 
@@ -311,22 +315,22 @@
                 <h3><b>Ask a question</b></h3>                <p>Feel free to ask any question and we will contact you to clear up the details.    </p>
 
                 <div class="col-lg-12 d-flex flex-column">
-                    <input name="patient-name" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'" class="form-control mt-20" required="" type="text">
+                    <input style="border-color:black;" name="patient-name" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'" class="form-control mt-20" required="" type="text">
                 </div>
 
                 <div class="col-lg-6 d-flex flex-column">
                     <br />
-                    <input name="email" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" class="form-control mt-20" required="" type="email">
+                    <input style="border-color:black;" name="email" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" class="form-control mt-20" required="" type="email">
                 </div>
 
                 <div class="col-lg-12 flex-column">
                     <br />
-                    <textarea rows="5" class="form-control mt-20" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+                    <textarea style="border-color:black;" rows="5" class="form-control mt-20" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
                     <br />
                 </div>
 
                 <div class="col-lg-12 d-flex justify-content-end send-btn">
-                    <button color="red">Submit</button>
+                    <button class="btn btn-primary" type="submit">Submit</button>
 
                 </div>
             </div>
