@@ -1,17 +1,66 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div>
+
+    <div id="carousel " class="carousel slide">
+        <ol class="carousel-indicators">
+
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class=" item active">
+                <img src="~/Pictures/contactus.png" />
+
+            </div>
+        </div>
+    </div>
+</div>
+<br /><br />
+
+     
+
+  <div class="col-sm-12 col-lg-4 col-lg-offset-1">
+       <h4 class="control-label">Find us at:</h4>
+       <p class="block-author">
+        I-Quad Developing Team
+       <br>Innovators
+       </p>
+       I-Quad Inc <br>
+       123 White Hall. Kingston 5, Jamaica<br>
+        Phone: (876) 963-7371<br>
+        Phone: (876) 963-8754<br />
+       <em class="block-author">Email: I-QuadMAS@gmail.com </em> <br>
+       <em class="block-author">Website: IQuad-team.com </em> <br>
+       <br>
+    </div>
+
+              <div class="col-sm-12 col-lg-5">
+                  <div class="feedback-form">
+
+                      <div id="contact-response"></div>
+
+                      <form action="MAILTO: I-QuadMAS@gmail.com" method="post" id="contact-form">
+
+                          <div class="form-group form-group-fullname">
+                              <label class="control-label" for="fullname">NAME *</label>
+                              <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Enter Your Name" required>
+                          </div>
+                          <div class="form-group form-group-email">
+                              <label class="control-label" for="email">E-MAIL *</label>
+                              <input type="text" class="form-control" name="email" id="email" placeholder="Enter Your E-Mail" required>
+                          </div>
+                          <div class="form-group form-group-message">
+                              <label class="control-label" for="message">MESSAGE *</label>
+                              <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+
+                      </form>
+                  </div>
+              </div>
+              <br />
