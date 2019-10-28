@@ -15,6 +15,22 @@ namespace IQuad2.Models
         [Required]
         [StringLength(255)]
         public string Lname { get; set; }
+        public string  Initial { get; set; }
+
+        [Required]
+        public int Age { get; set; }
+        public override string PhoneNumber { get; set; }
+
+        public string Street { get; set; }
+        [Required]
+        [StringLength(255)]
+        public string District { get; set; }
+
+        [Required]
+        [StringLength(255)]
+        public string Parish { get; set; }
+        public int UserTypeId { get; set; }
+
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

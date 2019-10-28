@@ -206,6 +206,10 @@
     <Compile Include="Migrations\201910240521594_NewTables.Designer.cs">
       <DependentUpon>201910240521594_NewTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910282206290_ChangingUserTableByExtendingAspNetUsersWithAdditionalAttributes.cs" />
+    <Compile Include="Migrations\201910282206290_ChangingUserTableByExtendingAspNetUsersWithAdditionalAttributes.Designer.cs">
+      <DependentUpon>201910282206290_ChangingUserTableByExtendingAspNetUsersWithAdditionalAttributes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -392,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910240521594_NewTables.resx">
       <DependentUpon>201910240521594_NewTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910282206290_ChangingUserTableByExtendingAspNetUsersWithAdditionalAttributes.resx">
+      <DependentUpon>201910282206290_ChangingUserTableByExtendingAspNetUsersWithAdditionalAttributes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
