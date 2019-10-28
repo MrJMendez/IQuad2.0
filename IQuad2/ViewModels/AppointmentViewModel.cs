@@ -8,7 +8,7 @@ namespace IQuad2.ViewModels
 {
     public class AppointmentViewModel 
     {
-        public IEnumerable<User> Doctor { get; set; } 
+        public IEnumerable<ApplicationUser> Doctor { get; set; } 
         public Appointment appointment { get; set; }
         //public User Id { get; set; }
 
