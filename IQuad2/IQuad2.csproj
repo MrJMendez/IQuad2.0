@@ -288,9 +288,6 @@
     <Content Include="Pictures\doc22.png" />
     <Content Include="Pictures\doc33.png" />
     <Content Include="Pictures\doc44.png" />
-    <Content Include="Pictures\doctor1.jpg" />
-    <Content Include="Pictures\doctor2.jpg" />
-    <Content Include="Pictures\doctor3.jpg" />
     <Content Include="Pictures\icon3_0000_.jpg" />
     <Content Include="Pictures\icon3_0001_.jpg" />
     <Content Include="Pictures\icon3_0003_.jpg" />
