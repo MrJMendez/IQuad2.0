@@ -2,65 +2,73 @@
     ViewBag.Title = "Contact";
 }
 
+    <div class="container">
+        <div>
 
-<div>
+            <div id="carousel " class="carousel slide">
+                <ol class="carousel-indicators">
 
-    <div id="carousel " class="carousel slide">
-        <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                </ol>
 
-            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel" data-slide-to="1"></li>
-        </ol>
+                <div class="carousel-inner">
+                    <div class=" item active">
+                        <img src="~/Pictures/contactus.png" />
 
-        <div class="carousel-inner">
-            <div class=" item active">
-                <img src="~/Pictures/contactus.png" />
-
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<br /><br />
+        <br /><br />
 
-     
 
-  <div class="col-sm-12 col-lg-4 col-lg-offset-1">
-       <h4 class="control-label">Find us at:</h4>
-       <p class="block-author">
-        I-Quad Developing Team
-       <br>Innovators
-       </p>
-       I-Quad Inc <br>
-       123 White Hall. Kingston 5, Jamaica<br>
-        Phone: (876) 963-7371<br>
-        Phone: (876) 963-8754<br />
-       <em class="block-author">Email: I-QuadMAS@gmail.com </em> <br>
-       <em class="block-author">Website: IQuad-team.com </em> <br>
-       <br>
-    </div>
 
-              <div class="col-sm-12 col-lg-5">
-                  <div class="feedback-form">
+        <div class="col-sm-12 col-lg-4 col-lg-offset-1">
+            <h4 class="control-label"><b>Find us at:</b></h4>
+            <p class="block-author">
+                I-Quad Developing Team
+                <br>Innovators
+            </p>
+            <b> I-Quad Inc</b> <br>
+            123 White Hall. Kingston 5, Jamaica<br>
+            <b> Phone:</b> (876) 963-7371<br>
+            <b>Phone:</b> (876) 963-8754<br />
+            <em class="block-author"><b>Email:</b> I-QuadMAS@gmail.com </em> <br>
+            <em class="block-author"><b>Website:</b> IQuad-team.com </em> <br>
+            <br>
+        </div>
 
-                      <div id="contact-response"></div>
+        <div class="col-sm-12 col-lg-5">
+            <div class="feedback-form">
 
-                      <form action="MAILTO: I-QuadMAS@gmail.com" method="post" id="contact-form">
+                <div id="contact-response"></div>
 
-                          <div class="form-group form-group-fullname">
-                              <label class="control-label" for="fullname">NAME *</label>
-                              <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Enter Your Name" required>
-                          </div>
-                          <div class="form-group form-group-email">
-                              <label class="control-label" for="email">E-MAIL *</label>
-                              <input type="text" class="form-control" name="email" id="email" placeholder="Enter Your E-Mail" required>
-                          </div>
-                          <div class="form-group form-group-message">
-                              <label class="control-label" for="message">MESSAGE *</label>
-                              <textarea class="form-control" name="message" id="message" rows="3"></textarea>
-                          </div>
-                          <button type="submit" class="btn btn-primary">Submit</button>
+                <form action="MAILTO: I-QuadMAS@gmail.com" method="post" id="contact-form">
 
-                      </form>
-                  </div>
-              </div>
-              <br />
+                    <div class="form-group form-group-fullname">
+                        <label class="control-label" for="fullname">NAME *</label>
+                        <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Enter Your Name" required>
+                    </div>
+                    <div class="form-group form-group-email">
+                        <label class="control-label" for="email">E-MAIL *</label>
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter Your E-Mail" required>
+                    </div>
+                    <div class="form-group form-group-message">
+                        <label class="control-label" for="message">MESSAGE *</label>
+                        <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                </form>
+            </div>
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+        </div>
+        <hr />
+    </div>          
+              
