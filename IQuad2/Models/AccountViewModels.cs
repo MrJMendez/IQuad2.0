@@ -15,6 +15,21 @@ namespace IQuad2.Models
         [Required]
         [Display(Name = "Last Name")]
         public string Lname { get; set; }
+        public string Initial { get; set; }
+
+        [Required]
+        public int Age { get; set; }
+        public string PhoneNumber { get; set; }
+
+        public string Street { get; set; }
+        [Required]
+        [StringLength(255)]
+        public string District { get; set; }
+
+        [Required]
+        [StringLength(255)]
+        public string Parish { get; set; }
+        public int UserTypeId { get; set; }
     }
 
     public class ExternalLoginListViewModel

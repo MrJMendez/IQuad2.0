@@ -389,7 +389,14 @@ namespace IQuad2.Controllers
                     UserName = model.Email,
                     Email = model.Email,
                     Fname = model.Fname,
-                    Lname = model.Lname
+                    Lname = model.Lname,
+                    Initial = model.Initial,
+                    Age = model.Age,
+                    PhoneNumber = model.PhoneNumber,
+                    Street = model.Street,
+                    District = model.District,
+                    Parish = model.Parish,
+                    UserTypeId = model.UserTypeId
                 };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
