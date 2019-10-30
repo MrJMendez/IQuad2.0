@@ -218,6 +218,10 @@
     <Compile Include="Migrations\201910291756022_updateAppointment.Designer.cs">
       <DependentUpon>201910291756022_updateAppointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910302201559_ChangeStartTimeAndEndTimeDataType.cs" />
+    <Compile Include="Migrations\201910302201559_ChangeStartTimeAndEndTimeDataType.Designer.cs">
+      <DependentUpon>201910302201559_ChangeStartTimeAndEndTimeDataType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -411,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910291756022_updateAppointment.resx">
       <DependentUpon>201910291756022_updateAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910302201559_ChangeStartTimeAndEndTimeDataType.resx">
+      <DependentUpon>201910302201559_ChangeStartTimeAndEndTimeDataType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

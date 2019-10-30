@@ -47,15 +47,18 @@ namespace IQuad2.Controllers
             
 
         }
-        public ActionResult Create(AppointmentViewModel viewModel)
+        [HttpPost]
+        public ActionResult Create(Appointment appointment)
         {
             //User.Identity.
             //Get current logged on user's id. In this case it belongs to the patient
 
             var patientId = User.Identity.GetUserId();
+
+            appointment.PatientId = patientId;
             
 
-            var appointment = new Appointment {
+            /*var appointment = new Appointment {
 
                 DoctorId = viewModel.DoctorId,
                 PatientId = patientId,
@@ -64,7 +67,7 @@ namespace IQuad2.Controllers
                 StartTime = viewModel.appointment.StartTime,
                 EndTime = viewModel.appointment.EndTime
                 
-            };
+            };*/
 
 
             _appointmentService.SaveAppointment(appointment);

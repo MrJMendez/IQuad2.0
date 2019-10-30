@@ -19,9 +19,9 @@ namespace IQuad2.Models
         public DateTime Date { get; set; }
 
         [Display(Name = "Start Time")]
-        public TimeSpan StartTime { get; set; }
+        public string StartTime { get; set; }
         [Display(Name = "End Time")]
-        public TimeSpan EndTime { get; set; }
+        public string EndTime { get; set; }
 
 
     }
