@@ -9,8 +9,6 @@ namespace IQuad2.Models
 {
     public class Appointment
     {
-        
-     
         public int Id { get; set; }
        
         public string PatientId { get; set; }

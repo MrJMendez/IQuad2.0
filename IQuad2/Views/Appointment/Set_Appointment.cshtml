@@ -33,10 +33,7 @@
     <div class="form-group">
 
         <label>Doctors</label>
-        @Html.DropDownListFor(m => m.Doctors, new SelectList(Model.Doctors, "Id", "Fname"), "Select Doctor", new { @class = "form-control" })
-
-
-
+        @Html.DropDownListFor(m => m.DoctorId, new SelectList(Model.Doctors, "Id", "Fname"), "Select Doctor", new { @class = "form-control" })
     </div>
 
 

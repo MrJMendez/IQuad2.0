@@ -11,7 +11,7 @@ using IQuad2.Services;
 
 namespace IQuad2.Controllers
 {
-    [Authorize]
+   
     public class AppointmentController : Controller
     {
         // GET: Appointment
@@ -53,6 +53,7 @@ namespace IQuad2.Controllers
             //Get current logged on user's id. In this case it belongs to the patient
 
             var patientId = User.Identity.GetUserId();
+            
 
             var appointment = new Appointment {
 
