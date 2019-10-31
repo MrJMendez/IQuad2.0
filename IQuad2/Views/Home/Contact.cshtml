@@ -2,17 +2,14 @@
     ViewBag.Title = "Contact";
 }
 
-    <div class="container">
+    <div class="container" style="float:none; width:1170px">
         <div>
 
             <div id="carousel " class="carousel slide">
                 <ol class="carousel-indicators">
-
-                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel" data-slide-to="1"></li>
                 </ol>
 
-                <div class="carousel-inner">
+                <div class="carousel-inner" style="float:none; ">
                     <div class=" item active">
                         <img src="~/Pictures/contactus.png" />
 
@@ -20,55 +17,83 @@
                 </div>
             </div>
         </div>
+    </div>
         <br /><br />
 
+        <div class="container-fluid-kamn">
+            <div class="row">
+                <div>
+                   <div id="map" style="height:400px;background:yellow;float:none;">
 
 
-        <div class="col-sm-12 col-lg-4 col-lg-offset-1">
-            <h4 class="control-label"><b>Find us at:</b></h4>
-            <p class="block-author">
-                I-Quad Developing Team
-                <br>Innovators
-            </p>
-            <b> I-Quad Inc</b> <br>
-            123 White Hall. Kingston 5, Jamaica<br>
-            <b> Phone:</b> (876) 963-7371<br>
-            <b>Phone:</b> (876) 963-8754<br />
-            <em class="block-author"><b>Email:</b> I-QuadMAS@gmail.com </em> <br>
-            <em class="block-author"><b>Website:</b> IQuad-team.com </em> <br>
-            <br>
-        </div>
+                    <script>
+                        function myMap() {
+                            var mapCanvas = document.getElementById("map");
+                            latlon = new google.maps.LatLng(18.015676, -77.498398)
+                            var mapOptions = {
+                                center: new google.maps.LatLng(18.015676, -77.498398), zoom: 17
+                            };
+                            var map = new google.maps.Map(mapCanvas, mapOptions);
+                            var marker = new google.maps.Marker({ position: latlon, map: map, title: "You are here!" });
+                        }
+                    </script>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15175.55635587846!2d-76.77306490664543!3d18.030350154844932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8edb3efcb798432d%3A0x29b3e98bc79c4dcc!2sSovereign%20Centre!5e0!3m2!1sen!2sjm!4v1572483094890!5m2!1sen!2sjm" width="1170" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    
+                    <br>
 
-        <div class="col-sm-12 col-lg-5">
-            <div class="feedback-form">
 
-                <div id="contact-response"></div>
-
-                <form action="MAILTO: I-QuadMAS@gmail.com" method="post" id="contact-form">
-
-                    <div class="form-group form-group-fullname">
-                        <label class="control-label" for="fullname">NAME *</label>
-                        <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Enter Your Name" required>
-                    </div>
-                    <div class="form-group form-group-email">
-                        <label class="control-label" for="email">E-MAIL *</label>
-                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter Your E-Mail" required>
-                    </div>
-                    <div class="form-group form-group-message">
-                        <label class="control-label" for="message">MESSAGE *</label>
-                        <textarea class="form-control" name="message" id="message" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-
-                </form>
+                </div>
+                </div>
             </div>
-
-            <br />
-            <br />
-            <br />
-            <br />
-
         </div>
-        <hr />
-    </div>          
-              
+
+                <br /> <br />
+
+                <div class="col-sm-12 col-lg-4 col-lg-offset-1">
+                    <h4 class="control-label"><b>Find us at:</b></h4>
+                    <p class="block-author">
+                        I-Quad Developing Team
+                        <br>Innovators
+                    </p>
+                    <b> I-Quad Inc</b> <br>
+                    123 White Hall. Kingston 5, Jamaica<br>
+                    <b> Phone:</b> (876) 963-7371<br>
+                    <b>Phone:</b> (876) 963-8754<br />
+                    <em class="block-author"><b>Email:</b> I-QuadMAS@gmail.com </em> <br>
+                    <em class="block-author"><b>Website:</b> IQuad-team.com </em> <br>
+                    <br>
+                </div>
+
+                <div class="col-sm-12 col-lg-5">
+                    <div class="feedback-form">
+
+                        <div id="contact-response"></div>
+
+                        <form action="MAILTO: I-QuadMAS@gmail.com" method="post" id="contact-form">
+
+                            <div class="form-group form-group-fullname">
+                                <label class="control-label" for="fullname">NAME *</label>
+                                <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Enter Your Name" required>
+                            </div>
+                            <div class="form-group form-group-email">
+                                <label class="control-label" for="email">E-MAIL *</label>
+                                <input type="text" class="form-control" name="email" id="email" placeholder="Enter Your E-Mail" required>
+                            </div>
+                            <div class="form-group form-group-message">
+                                <label class="control-label" for="message">MESSAGE *</label>
+                                <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+
+                        </form>
+                    </div>
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
+                </div>
+                <hr />
+           
+
