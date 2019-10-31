@@ -11,17 +11,23 @@ namespace IQuad2.Models
     {
         public int Id { get; set; }
        
+        [Required]
         public string PatientId { get; set; }
+     
 
         public string DoctorId { get; set; }
         [Display(Name = "Purpose of Visit")]
         public string PurposeOfVisit { get; set; }
+        [Required]
         public DateTime Date { get; set; }
 
-        [Display(Name = "Start Time")]
-        public TimeSpan StartTime { get; set; }
+        [Required]
+        [Display(Name = "Start Time")]   
+        public string StartTime { get; set; }
+
+        [Required]
         [Display(Name = "End Time")]
-        public TimeSpan EndTime { get; set; }
+        public string EndTime { get; set; }
 
 
     }

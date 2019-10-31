@@ -40,22 +40,25 @@ namespace IQuad2.Controllers
             var viewModel = new AppointmentViewModel {
 
                 Doctors = _doctorService.GetDoctors()
-               
+              
         };
 
               return View(viewModel); 
             
 
         }
-        public ActionResult Create(AppointmentViewModel viewModel)
+        [HttpPost]
+        public ActionResult Create(Appointment appointment)
         {
             //User.Identity.
             //Get current logged on user's id. In this case it belongs to the patient
 
             var patientId = User.Identity.GetUserId();
+
+            appointment.PatientId = patientId;
             
 
-            var appointment = new Appointment {
+            /*var appointment = new Appointment {
 
                 DoctorId = viewModel.DoctorId,
                 PatientId = patientId,
@@ -64,7 +67,7 @@ namespace IQuad2.Controllers
                 StartTime = viewModel.appointment.StartTime,
                 EndTime = viewModel.appointment.EndTime
                 
-            };
+            };*/
 
 
             _appointmentService.SaveAppointment(appointment);
@@ -72,10 +75,26 @@ namespace IQuad2.Controllers
         }
         public ActionResult Appointment_Set()
         {
+            /*
+            Appointment cAppointment = new Appointment();
+
+            cAppointment = _appointmentService.Edit(User.Identity.GetUserId());
             
+            if(cAppointment == null)
+            {
+                return HttpNotFound();
+            }
 
+            AppointmentViewModel appointment = new AppointmentViewModel
+            {
+                appointment = cAppointment,
+                PatientId = User.Identity.GetUserId(),
+                Doctors = _doctorService.GetDoctors(),
+                DoctorId = cAppointment.DoctorId
+            };
+                */
 
-            return View();
+            return View(/*appointment*/);
         }
       
         
