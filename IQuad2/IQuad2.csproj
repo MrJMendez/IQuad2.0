@@ -222,6 +222,14 @@
     <Compile Include="Migrations\201910302201559_ChangeStartTimeAndEndTimeDataType.Designer.cs">
       <DependentUpon>201910302201559_ChangeStartTimeAndEndTimeDataType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910310215211_RequiredAttributeAddedToFields.cs" />
+    <Compile Include="Migrations\201910310215211_RequiredAttributeAddedToFields.Designer.cs">
+      <DependentUpon>201910310215211_RequiredAttributeAddedToFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910310220175_ChangedRequired.cs" />
+    <Compile Include="Migrations\201910310220175_ChangedRequired.Designer.cs">
+      <DependentUpon>201910310220175_ChangedRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -418,6 +426,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910302201559_ChangeStartTimeAndEndTimeDataType.resx">
       <DependentUpon>201910302201559_ChangeStartTimeAndEndTimeDataType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910310215211_RequiredAttributeAddedToFields.resx">
+      <DependentUpon>201910310215211_RequiredAttributeAddedToFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910310220175_ChangedRequired.resx">
+      <DependentUpon>201910310220175_ChangedRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -40,7 +40,7 @@ namespace IQuad2.Controllers
             var viewModel = new AppointmentViewModel {
 
                 Doctors = _doctorService.GetDoctors()
-               
+              
         };
 
               return View(viewModel); 
@@ -75,10 +75,26 @@ namespace IQuad2.Controllers
         }
         public ActionResult Appointment_Set()
         {
+            /*
+            Appointment cAppointment = new Appointment();
+
+            cAppointment = _appointmentService.Edit(User.Identity.GetUserId());
             
+            if(cAppointment == null)
+            {
+                return HttpNotFound();
+            }
 
+            AppointmentViewModel appointment = new AppointmentViewModel
+            {
+                appointment = cAppointment,
+                PatientId = User.Identity.GetUserId(),
+                Doctors = _doctorService.GetDoctors(),
+                DoctorId = cAppointment.DoctorId
+            };
+                */
 
-            return View();
+            return View(/*appointment*/);
         }
       
         

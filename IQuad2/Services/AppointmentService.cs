@@ -17,5 +17,11 @@ namespace IQuad2.Services
             _context.appointment.Add(appointment);
             _context.SaveChanges();
         }
+
+       /* public Appointment Edit(string id )
+        {
+            var appointment = _context.appointment.SingleOrDefault(c => c.PatientId == id);
+            return appointment;
+        } */
     }
 }

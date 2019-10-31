@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+
 namespace IQuad2.ViewModels
 {
     public class AppointmentViewModel 
