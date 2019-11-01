@@ -237,6 +237,14 @@
     <Compile Include="Migrations\201910312011533_UserTypeIdToString.Designer.cs">
       <DependentUpon>201910312011533_UserTypeIdToString.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911012002179_Refresh.cs" />
+    <Compile Include="Migrations\201911012002179_Refresh.Designer.cs">
+      <DependentUpon>201911012002179_Refresh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911012015541_refreshagain.cs" />
+    <Compile Include="Migrations\201911012015541_refreshagain.Designer.cs">
+      <DependentUpon>201911012015541_refreshagain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -381,6 +389,7 @@
     <Content Include="Views\Appointment\Set_Appointment.cshtml" />
     <Content Include="Views\Appointment\Index.cshtml" />
     <Content Include="Views\Appointment\Appointment_Set.cshtml" />
+    <Content Include="Views\Appointment\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -443,6 +452,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910312011533_UserTypeIdToString.resx">
       <DependentUpon>201910312011533_UserTypeIdToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911012002179_Refresh.resx">
+      <DependentUpon>201911012002179_Refresh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911012015541_refreshagain.resx">
+      <DependentUpon>201911012015541_refreshagain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

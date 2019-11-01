@@ -30,9 +30,10 @@ namespace IQuad2.Controllers
         //}
         public ActionResult Index()
         {
-          
 
-            return View();
+            var users = _appointmentService.Users();
+
+            return View(users);
         }
         public ActionResult Set_Appointment()
         {
@@ -72,6 +73,18 @@ namespace IQuad2.Controllers
 
             _appointmentService.SaveAppointment(appointment);
             return RedirectToAction("Appointment_Set", "Appointment");
+        }
+
+        public ActionResult Details(string id)
+        {
+            var appointment = _appointmentService.AppointDetails(id);
+
+                if(appointment == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(appointment);
         }
         public ActionResult Appointment_Set()
         {

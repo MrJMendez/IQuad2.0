@@ -9,6 +9,7 @@ namespace IQuad2.Models
 {
     public class Appointment
     {
+        [Required]
         public int Id { get; set; }
        
         [Required]
