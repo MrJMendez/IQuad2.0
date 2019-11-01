@@ -9,6 +9,7 @@ namespace IQuad2.Services
     public class AppointmentService
     {
         private readonly ApplicationDbContext _context;
+        
         public AppointmentService()
         {
             _context = new ApplicationDbContext();
