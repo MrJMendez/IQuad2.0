@@ -108,6 +108,9 @@ namespace IQuad2.Models
         [Required]
         [StringLength(255)]
         public string Parish { get; set; }
+
+        [Required]
+        [Display(Name ="User Role")]
         public string UserTypeId { get; set; }
 
         [Required]

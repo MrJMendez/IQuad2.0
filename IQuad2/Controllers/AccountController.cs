@@ -165,6 +165,7 @@ namespace IQuad2.Controllers
                     Street = model.Street,
                     District = model.District,
                     Parish = model.Parish,
+                    UserTypeId = model.UserTypeId
                     
 
 

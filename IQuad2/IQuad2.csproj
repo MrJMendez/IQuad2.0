@@ -245,6 +245,14 @@
     <Compile Include="Migrations\201911012015541_refreshagain.Designer.cs">
       <DependentUpon>201911012015541_refreshagain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911031909504_MakeUserTypeIdRequired.cs" />
+    <Compile Include="Migrations\201911031909504_MakeUserTypeIdRequired.Designer.cs">
+      <DependentUpon>201911031909504_MakeUserTypeIdRequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911031912077_SeedUsersAndRoles.cs" />
+    <Compile Include="Migrations\201911031912077_SeedUsersAndRoles.Designer.cs">
+      <DependentUpon>201911031912077_SeedUsersAndRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -458,6 +466,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911012015541_refreshagain.resx">
       <DependentUpon>201911012015541_refreshagain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911031909504_MakeUserTypeIdRequired.resx">
+      <DependentUpon>201911031909504_MakeUserTypeIdRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911031912077_SeedUsersAndRoles.resx">
+      <DependentUpon>201911031912077_SeedUsersAndRoles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

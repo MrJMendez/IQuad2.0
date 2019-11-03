@@ -29,6 +29,8 @@ namespace IQuad2.Models
         [Required]
         [StringLength(255)]
         public string Parish { get; set; }
+
+        [Required]
         public string UserTypeId { get; set; }
 
 
