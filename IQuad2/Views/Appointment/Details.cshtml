@@ -1,0 +1,50 @@
+﻿@model IEnumerable<IQuad2.Models.Appointment>
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+@if (!Model.Any())
+{
+    <p>There is no appointment for this patient</p>
+}
+else
+{
+    <table id="appointment" class="table table-bordered table-hover">
+        <thead>
+
+            <tr>
+                <th>Doctor Name</th>
+                <th>Purpose Of Visit</th>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+
+            </tr>
+
+        </thead>
+        <tbody>
+
+            @foreach (var values in Model)
+            {
+                <tr>
+
+                    <td> @values.DoctorId</td>
+                    <td> @values.PurposeOfVisit</td>
+                    <td> @values.Date</td>
+                    <td> @values.StartTime </td>
+                    <td> @values.EndTime</td>
+
+                </tr>
+            }
+
+
+
+        </tbody>
+    </table>
+
+}
+
+
+
+

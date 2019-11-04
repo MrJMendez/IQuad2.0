@@ -15,7 +15,8 @@ namespace IQuad2.Services
         }
 
         public List<ApplicationUser> GetDoctors() {
-            return _context.Users.Where(x => x.UserTypeId == (int)UserTypeEnum.Doctor).ToList();
+
+            return _context.Users.Where(x => x.UserTypeId == UserTypeEnum.Doctor.ToString()).ToList();
         }
     }
 }

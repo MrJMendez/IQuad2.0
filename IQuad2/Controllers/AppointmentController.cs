@@ -11,7 +11,7 @@ using IQuad2.Services;
 
 namespace IQuad2.Controllers
 {
-    [Authorize]
+   
     public class AppointmentController : Controller
     {
         // GET: Appointment
@@ -30,9 +30,10 @@ namespace IQuad2.Controllers
         //}
         public ActionResult Index()
         {
-          
 
-            return View();
+            var users = _appointmentService.Users();
+
+            return View(users);
         }
         public ActionResult Set_Appointment()
         {
@@ -40,21 +41,25 @@ namespace IQuad2.Controllers
             var viewModel = new AppointmentViewModel {
 
                 Doctors = _doctorService.GetDoctors()
-               
+              
         };
 
               return View(viewModel); 
             
 
         }
-        public ActionResult Create(AppointmentViewModel viewModel)
+        [HttpPost]
+        public ActionResult Create(Appointment appointment)
         {
             //User.Identity.
             //Get current logged on user's id. In this case it belongs to the patient
 
             var patientId = User.Identity.GetUserId();
 
-            var appointment = new Appointment {
+            appointment.PatientId = patientId;
+            
+
+            /*var appointment = new Appointment {
 
                 DoctorId = viewModel.DoctorId,
                 PatientId = patientId,
@@ -63,18 +68,46 @@ namespace IQuad2.Controllers
                 StartTime = viewModel.appointment.StartTime,
                 EndTime = viewModel.appointment.EndTime
                 
-            };
+            };*/
 
 
             _appointmentService.SaveAppointment(appointment);
             return RedirectToAction("Appointment_Set", "Appointment");
         }
+
+        public ActionResult Details(string id)
+        {
+            var appointment = _appointmentService.AppointDetails(id);
+
+                if(appointment == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(appointment);
+        }
         public ActionResult Appointment_Set()
         {
+            /*
+            Appointment cAppointment = new Appointment();
+
+            cAppointment = _appointmentService.Edit(User.Identity.GetUserId());
             
+            if(cAppointment == null)
+            {
+                return HttpNotFound();
+            }
 
+            AppointmentViewModel appointment = new AppointmentViewModel
+            {
+                appointment = cAppointment,
+                PatientId = User.Identity.GetUserId(),
+                Doctors = _doctorService.GetDoctors(),
+                DoctorId = cAppointment.DoctorId
+            };
+                */
 
-            return View();
+            return View(/*appointment*/);
         }
       
         
