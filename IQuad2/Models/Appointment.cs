@@ -11,7 +11,6 @@ namespace IQuad2.Models
     {
         [Required]
         public int Id { get; set; }
-       
         [Required]
         public string PatientId { get; set; }
         public string DoctorId { get; set; }

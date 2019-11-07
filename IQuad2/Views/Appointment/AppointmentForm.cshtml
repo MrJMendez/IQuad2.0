@@ -1,15 +1,13 @@
 ﻿@model IQuad2.ViewModels.AppointmentViewModel
 @{
-    ViewBag.Title = "Set Appointment";
+    ViewBag.Title = "AppointmentForm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 
 <h2>Set Appointment</h2>
 @using (Html.BeginForm("Save", "Appointment"))
 {
 
-        
     <div class="form-group">
 
         @Html.LabelFor(m => m.appointment.PurposeOfVisit)
@@ -18,7 +16,7 @@
     <div class="form-group">
 
         @Html.LabelFor(m => m.appointment.Date)
-        @Html.EditorFor(m => m.appointment.Date, new { htmlAttributes = new { @class = "form-control date-picker" } })
+        @Html.TextBoxFor(m => m.appointment.Date, "{0:d MMM yyyy}", new { @class = "form-control date-picker" })
     </div>
     <div class="form-group">
 
@@ -38,7 +36,7 @@
     @Html.HiddenFor(m => m.appointment.Id);
 
 
-    <button type="submit" class="btn btn-primary">Set Appointment</button>
+    <button type="submit" class="btn btn-primary">Save Appointment</button>
 
     @section scripts{
 

@@ -18,7 +18,6 @@ namespace IQuad2.Services
         public List<ApplicationUser> GetUsers()
         {
             var users = _context.Users.Include(u => u.UserType).ToList();
-
             return users;
         }
 

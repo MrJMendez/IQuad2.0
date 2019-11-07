@@ -30,27 +30,21 @@ namespace IQuad2.Controllers
         //}
         public ActionResult Index()
         {
+            var appointments = _appointmentService.GetAppointments();
 
-            var users = _userService.GetUsers();
-
-            return View(users);
+            return View(appointments);
         }
         public ActionResult Set_Appointment()
         {
 
-            var viewModel = new AppointmentViewModel {
+            var viewModel = _appointmentService.NewView();
 
-                Doctors = _userService.GetDoctors()
-              
-        };
-
-              return View(viewModel); 
-
+            return View("AppointmentForm" , viewModel); 
         }
+
         [HttpPost]
         public ActionResult Save(Appointment appointment)
         {
-            
 
             var patientId = User.Identity.GetUserId();
 
@@ -72,7 +66,7 @@ namespace IQuad2.Controllers
             return View(appointment);
         }
 
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int id)
         {
             var appointment = _appointmentService.AppointEdit(id);
 
@@ -80,17 +74,17 @@ namespace IQuad2.Controllers
             {
                 return HttpNotFound();
             }
-
-            AppointmentViewModel appoint = new AppointmentViewModel
+             
+            var appoint = new AppointmentViewModel
             {
                 appointment = appointment,
-                PatientId = User.Identity.GetUserId(),
+               // PatientId =appointment.PatientId,
                 Doctors = _userService.GetDoctors(),
-                DoctorId = appointment.DoctorId
+              //  DoctorId = appointment.DoctorId
             };
 
 
-            return View(appoint);
+            return View("AppointmentForm", appoint);
         }
 
 

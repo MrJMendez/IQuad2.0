@@ -1,45 +1,42 @@
-﻿@model IEnumerable<IQuad2.Models.ApplicationUser>
-@*
-    Note: I've set the model for this view to IEnumerable<Customer>.
-    This is a simple interface implemented by the list class. Since
-    in this view we only want to iterate over this list, and we don't
-    need any of the operations in the List class (eg Add, Remove, etc),
-    it's better to use the IEnumerable interface, which allows use to
-    iterate over the list. If in the future, we replace the List with a
-    different data structure, as long as it is enumerable, our view code
-    will remain unchanged.
-*@
+﻿@model IEnumerable<IQuad2.Models.Appointment>
 
 @{
-    ViewBag.Title = "user";
+    ViewBag.Title = "appointments";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Users</h2>
+<h2>Appointments</h2>
 
 
 <table id="appointment" class="table table-bordered table-hover">
     <thead>
 
         <tr>
-            <th>View Appointments</th>
-            <th>First Name</th>
-            <th>First Lame</th>
 
+            <th>Edit</th>
+            <th>Patient Name</th>
+            <th>Purpose Of Visit</th>
+            <th>Doctor Name</th>
+            <th>Date</th>
+            <th>Start Time </th>
+            <th>End Time</th>
 
         </tr>
-
     </thead>
     <tbody>
-        @foreach (var users in Model)
+        @foreach (var appointment in Model)
         {
         <tr>
 
-            <td>@Html.ActionLink("<==>","Edit", "Appointment", new { id = users.Id }, null) </td>
-            <td>@users.Fname</td>
-            <td>@users.Lname</td>
+           <td>@Html.ActionLink("<==>", "Edit", "Appointment", new {id = appointment.Id }, null) </td>
 
-           
+            <td>@appointment.PatientId</td>
+            <td>@appointment.PurposeOfVisit</td>
+            <td>@appointment.DoctorId</td>
+            <td>@appointment.Date</td>
+            <td>@appointment.StartTime</td>
+            <td>@appointment.EndTime</td>
+
         </tr>
         }
 

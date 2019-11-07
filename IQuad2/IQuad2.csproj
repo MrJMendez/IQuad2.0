@@ -424,7 +424,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
-    <Content Include="Views\Appointment\Set_Appointment.cshtml" />
+    <Content Include="Views\Appointment\AppointmentForm.cshtml" />
     <Content Include="Views\Appointment\Index.cshtml" />
     <Content Include="Views\Appointment\Appointment_Set.cshtml" />
     <Content Include="Views\Appointment\Details.cshtml" />
