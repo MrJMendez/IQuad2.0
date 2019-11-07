@@ -1,15 +1,17 @@
 ﻿@model IQuad2.ViewModels.AppointmentViewModel
 @{
-    ViewBag.Title = "Set Appointment";
+    ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
-<h2>Set Appointment</h2>
+
+
+
 @using (Html.BeginForm("Save", "Appointment"))
 {
 
-        
+
     <div class="form-group">
 
         @Html.LabelFor(m => m.appointment.PurposeOfVisit)
@@ -18,12 +20,12 @@
     <div class="form-group">
 
         @Html.LabelFor(m => m.appointment.Date)
-        @Html.EditorFor(m => m.appointment.Date, new { htmlAttributes = new { @class = "form-control date-picker" } })
+        @Html.TextBoxFor(m => m.appointment.Date, "{0:d MMM yyyy}", new { @class = "form-control date-picker" })
     </div>
     <div class="form-group">
 
         @Html.LabelFor(m => m.appointment.StartTime)
-        @Html.TextBoxFor(m => m.appointment.StartTime,  new { @class = "form-control timepicker" })
+        @Html.TextBoxFor(m => m.appointment.StartTime, new { @class = "form-control timepicker" })
     </div>
     <div class="form-group">
 
@@ -35,10 +37,9 @@
         <label>Doctors</label>
         @Html.DropDownListFor(m => m.appointment.DoctorId, new SelectList(Model.Doctors, "Id", "Fname"), "Select Doctor", new { @class = "form-control" })
     </div>
-    @Html.HiddenFor(m => m.appointment.Id);
 
 
-    <button type="submit" class="btn btn-primary">Set Appointment</button>
+    <button type="submit" class="btn btn-primary">SAVE</button>
 
     @section scripts{
 
@@ -58,7 +59,7 @@
                     changeMonth: true,
                     changeYear: true,
                     yearRange: "2015:2025",
-                    // gotoCurrent: true.... implement this a next time 
+                    // gotoCurrent: true.... implement this a next time
 
                 });
 
@@ -72,9 +73,4 @@
     }
 }
 
-
-
-
-
-
-
+    

@@ -174,6 +174,7 @@
     <Compile Include="Controllers\AppointmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -253,6 +254,34 @@
     <Compile Include="Migrations\201911031912077_SeedUsersAndRoles.Designer.cs">
       <DependentUpon>201911031912077_SeedUsersAndRoles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911051639279_ChangeAppointmentModel.cs" />
+    <Compile Include="Migrations\201911051639279_ChangeAppointmentModel.Designer.cs">
+      <DependentUpon>201911051639279_ChangeAppointmentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911060218233_RevertAppointmentModel.cs" />
+    <Compile Include="Migrations\201911060218233_RevertAppointmentModel.Designer.cs">
+      <DependentUpon>201911060218233_RevertAppointmentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911060406530_SeedAdminUserType.cs" />
+    <Compile Include="Migrations\201911060406530_SeedAdminUserType.Designer.cs">
+      <DependentUpon>201911060406530_SeedAdminUserType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911062135200_FixUserTypeAndRole.cs" />
+    <Compile Include="Migrations\201911062135200_FixUserTypeAndRole.Designer.cs">
+      <DependentUpon>201911062135200_FixUserTypeAndRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911062318448_Reseed.cs" />
+    <Compile Include="Migrations\201911062318448_Reseed.Designer.cs">
+      <DependentUpon>201911062318448_Reseed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911062321270_DataIntoUserTypes.cs" />
+    <Compile Include="Migrations\201911062321270_DataIntoUserTypes.Designer.cs">
+      <DependentUpon>201911062321270_DataIntoUserTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911070116257_SeedUsersAndRolesAgain.cs" />
+    <Compile Include="Migrations\201911070116257_SeedUsersAndRolesAgain.Designer.cs">
+      <DependentUpon>201911070116257_SeedUsersAndRolesAgain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -265,9 +294,10 @@
     <Compile Include="Models\UserTypeEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AppointmentService.cs" />
-    <Compile Include="Services\DoctorService.cs" />
+    <Compile Include="Services\UserService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AppointmentViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -398,6 +428,8 @@
     <Content Include="Views\Appointment\Index.cshtml" />
     <Content Include="Views\Appointment\Appointment_Set.cshtml" />
     <Content Include="Views\Appointment\Details.cshtml" />
+    <Content Include="Views\Appointment\Edit.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -472,6 +504,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911031912077_SeedUsersAndRoles.resx">
       <DependentUpon>201911031912077_SeedUsersAndRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911051639279_ChangeAppointmentModel.resx">
+      <DependentUpon>201911051639279_ChangeAppointmentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911060218233_RevertAppointmentModel.resx">
+      <DependentUpon>201911060218233_RevertAppointmentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911060406530_SeedAdminUserType.resx">
+      <DependentUpon>201911060406530_SeedAdminUserType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911062135200_FixUserTypeAndRole.resx">
+      <DependentUpon>201911062135200_FixUserTypeAndRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911062318448_Reseed.resx">
+      <DependentUpon>201911062318448_Reseed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911062321270_DataIntoUserTypes.resx">
+      <DependentUpon>201911062321270_DataIntoUserTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911070116257_SeedUsersAndRolesAgain.resx">
+      <DependentUpon>201911070116257_SeedUsersAndRolesAgain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

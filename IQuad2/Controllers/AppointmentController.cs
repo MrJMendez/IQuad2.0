@@ -15,12 +15,12 @@ namespace IQuad2.Controllers
     public class AppointmentController : Controller
     {
         // GET: Appointment
-        private readonly DoctorService _doctorService;
+        private readonly UserService _userService;
         private readonly AppointmentService _appointmentService;
 
         public AppointmentController()
         {
-            _doctorService = new DoctorService();
+            _userService = new UserService();
             _appointmentService = new AppointmentService();
         }
 
@@ -31,7 +31,7 @@ namespace IQuad2.Controllers
         public ActionResult Index()
         {
 
-            var users = _appointmentService.Users();
+            var users = _userService.GetUsers();
 
             return View(users);
         }
@@ -40,36 +40,21 @@ namespace IQuad2.Controllers
 
             var viewModel = new AppointmentViewModel {
 
-                Doctors = _doctorService.GetDoctors()
+                Doctors = _userService.GetDoctors()
               
         };
 
               return View(viewModel); 
-            
 
         }
         [HttpPost]
-        public ActionResult Create(Appointment appointment)
+        public ActionResult Save(Appointment appointment)
         {
-            //User.Identity.
-            //Get current logged on user's id. In this case it belongs to the patient
+            
 
             var patientId = User.Identity.GetUserId();
 
             appointment.PatientId = patientId;
-            
-
-            /*var appointment = new Appointment {
-
-                DoctorId = viewModel.DoctorId,
-                PatientId = patientId,
-                Date = viewModel.appointment.Date,
-                PurposeOfVisit = viewModel.appointment.PurposeOfVisit,
-                StartTime = viewModel.appointment.StartTime,
-                EndTime = viewModel.appointment.EndTime
-                
-            };*/
-
 
             _appointmentService.SaveAppointment(appointment);
             return RedirectToAction("Appointment_Set", "Appointment");
@@ -86,6 +71,30 @@ namespace IQuad2.Controllers
 
             return View(appointment);
         }
+
+        public ActionResult Edit(string id)
+        {
+            var appointment = _appointmentService.AppointEdit(id);
+
+            if(appointment == null)
+            {
+                return HttpNotFound();
+            }
+
+            AppointmentViewModel appoint = new AppointmentViewModel
+            {
+                appointment = appointment,
+                PatientId = User.Identity.GetUserId(),
+                Doctors = _userService.GetDoctors(),
+                DoctorId = appointment.DoctorId
+            };
+
+
+            return View(appoint);
+        }
+
+
+
         public ActionResult Appointment_Set()
         {
             /*

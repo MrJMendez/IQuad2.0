@@ -15,7 +15,7 @@ namespace IQuad2.Models
         [Required]
         [StringLength(255)]
         public string Lname { get; set; }
-        public string  Initial { get; set; }
+        public string Initial { get; set; }
 
         [Required]
         public int Age { get; set; }
@@ -29,9 +29,10 @@ namespace IQuad2.Models
         [Required]
         [StringLength(255)]
         public string Parish { get; set; }
+        public UserType UserType { get; set; }
 
         [Required]
-        public string UserTypeId { get; set; }
+        public int UserTypeId { get; set; }
 
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
