@@ -12,28 +12,35 @@
 
         @Html.LabelFor(m => m.appointment.PurposeOfVisit)
         @Html.TextAreaFor(m => m.appointment.PurposeOfVisit, new { @class = "form-control" })
+        
     </div>
     <div class="form-group">
 
         @Html.LabelFor(m => m.appointment.Date)
         @Html.TextBoxFor(m => m.appointment.Date, "{0:d MMM yyyy}", new { @class = "form-control date-picker" })
+        @Html.ValidationMessageFor(m => m.appointment.Date)
     </div>
     <div class="form-group">
 
         @Html.LabelFor(m => m.appointment.StartTime)
-        @Html.TextBoxFor(m => m.appointment.StartTime,  new { @class = "form-control timepicker" })
+        @Html.TextBoxFor(m => m.appointment.StartTime, new { @class = "form-control timepicker" })
+        @Html.ValidationMessageFor(m => m.appointment.StartTime)
     </div>
     <div class="form-group">
 
         @Html.LabelFor(m => m.appointment.EndTime)
         @Html.TextBoxFor(m => m.appointment.EndTime, new { @class = "form-control timepicker" })
+        @Html.ValidationMessageFor(m => m.appointment.EndTime)
     </div>
     <div class="form-group">
 
         <label>Doctors</label>
         @Html.DropDownListFor(m => m.appointment.DoctorId, new SelectList(Model.Doctors, "Id", "Fname"), "Select Doctor", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.appointment.DoctorId)
     </div>
     @Html.HiddenFor(m => m.appointment.Id);
+    @Html.HiddenFor(m => m.Patients);
+    @Html.AntiForgeryToken()
 
 
     <button type="submit" class="btn btn-primary">Save Appointment</button>
@@ -56,7 +63,7 @@
                     changeMonth: true,
                     changeYear: true,
                     yearRange: "2015:2025",
-                    // gotoCurrent: true.... implement this a next time 
+                    // gotoCurrent: true.... implement this a next time
 
                 });
 
