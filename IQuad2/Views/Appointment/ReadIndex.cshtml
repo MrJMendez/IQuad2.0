@@ -1,0 +1,43 @@
+﻿@model IEnumerable<IQuad2.Models.Appointment>
+
+@{
+    ViewBag.Title = "appointments";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Appointments</h2>
+
+
+<table id="appointment" class="table table-bordered table-hover">
+    <thead>
+
+        <tr>
+
+            
+            <th>Patient Name</th>
+            <th>Purpose Of Visit</th>
+            <th>Doctor Name</th>
+            <th>Date</th>
+            <th>Start Time </th>
+            <th>End Time</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var appointment in Model)
+        {
+        <tr>
+
+           <td>@appointment.Patient.Fname @appointment.Patient.Lname</td>
+            <td>@appointment.PurposeOfVisit</td>
+            <td>@appointment.Doctor.Fname @appointment.Doctor.Lname</td>
+            <td>@appointment.Date.ToLongDateString()</td>
+            <td>@appointment.StartTime.ToLongTimeString()</td>
+            <td>@appointment.EndTime.ToLongTimeString()</td>
+
+        </tr>
+        }
+
+    </tbody>
+</table>
+
