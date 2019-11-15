@@ -19,8 +19,20 @@ namespace IQuad2.Services
 
         public IEnumerable<Appointment> GetAppointments()
         {
-            var appointments = _context.appointment.Include(a => a.User).ToList();
+            var appointments = _context.appointment./*Include(a => a.User)*/ToList();
 
+
+            return appointments;
+        }
+        public IEnumerable<Appointment> GetPatientAppointments(string patientId)
+        {
+            var appointments = _context.appointment.ToList().Where( a => a.PatientId == patientId);
+
+            return appointments;
+        }
+        public IEnumerable<Appointment> GetDoctorAppointments(string doctorId)
+        {
+            var appointments = _context.appointment.ToList().Where(a => a.DoctorId == doctorId);
 
             return appointments;
         }
@@ -35,7 +47,6 @@ namespace IQuad2.Services
                 Doctors = doctors,
                 Patients = patients,
              
-               
             };
      
             return viewModel;
@@ -63,7 +74,7 @@ namespace IQuad2.Services
 
         public IEnumerable<Appointment> AppointDetails(string id)
         {
-            var appointment = _context.appointment.Include(a => a.User).ToList().Where(a => a.PatientId == id);
+            var appointment = _context.appointment.ToList().Where(a => a.PatientId == id);
 
             return appointment;
         }

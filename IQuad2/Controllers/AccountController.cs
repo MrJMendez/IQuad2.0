@@ -166,7 +166,7 @@ namespace IQuad2.Controllers
                     Street = model.Street,
                     District = model.District,
                     Parish = model.Parish,
-                    UserTypeId = model.UserTypeId,
+                    UserTypeId = 4,
 
 
                 };
@@ -182,7 +182,7 @@ namespace IQuad2.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-
+                    /*
                     string role = "null";
 
                     if (model.UserTypeId == 1) {
@@ -199,8 +199,8 @@ namespace IQuad2.Controllers
                     {
                         role = "Patient";
                     }
-
-                    await this.UserManager.AddToRoleAsync(user.Id, role);
+                    */
+                    await this.UserManager.AddToRoleAsync(user.Id, "Patient");
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);

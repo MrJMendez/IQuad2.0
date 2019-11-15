@@ -30,10 +30,24 @@ namespace IQuad2.Controllers
         //}
         public ActionResult Index()
         {
-            var appointments = _appointmentService.GetAppointments();
+            IEnumerable<Appointment> appointments = null;
+
+            if (User.IsInRole("Admin"))
+            {
+                 appointments = _appointmentService.GetAppointments();
+                return View("ReadIndex",appointments);
+            }
+            if (User.IsInRole("Doctor"))
+            {
+                appointments = _appointmentService.GetDoctorAppointments(User.Identity.GetUserId());
+                return View("ReadIndex",appointments);
+            }
+
+            appointments = _appointmentService.GetPatientAppointments(User.Identity.GetUserId());
 
             return View(appointments);
         }
+     
         public ActionResult Set_Appointment()
         {
 
@@ -68,6 +82,7 @@ namespace IQuad2.Controllers
             return View(appointment);
         }
 
+        [Authorize(Roles ="Patient")]
         public ActionResult Edit(int id)
         {
             var appointment = _appointmentService.AppointEdit(id);
