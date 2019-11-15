@@ -9,7 +9,6 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using IQuad2.Models;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace IQuad2.Controllers
 {
@@ -24,7 +23,7 @@ namespace IQuad2.Controllers
 
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         {
             UserManager = userManager;
             SignInManager = signInManager;
@@ -36,9 +35,9 @@ namespace IQuad2.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set
-            {
-                _signInManager = value;
+            private set 
+            { 
+                _signInManager = value; 
             }
         }
 
@@ -122,7 +121,7 @@ namespace IQuad2.Controllers
             // If a user enters incorrect codes for a specified amount of time then the user account 
             // will be locked out for a specified amount of time. 
             // You can configure the account lockout settings in IdentityConfig
-            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent: model.RememberMe, rememberBrowser: model.RememberBrowser);
+            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent:  model.RememberMe, rememberBrowser: model.RememberBrowser);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -155,26 +154,26 @@ namespace IQuad2.Controllers
             {
                 var user = new ApplicationUser
                 {
-
+                    
                     UserName = model.Email,
                     Email = model.Email,
                     Fname = model.Fname,
                     Lname = model.Lname,
                     Initial = model.Initial,
-                    Age = model.Age,
+                    Age= model.Age,
                     PhoneNumber = model.PhoneNumber,
                     Street = model.Street,
                     District = model.District,
                     Parish = model.Parish,
-                    UserTypeId = 4,
+                    UserTypeId = model.UserTypeId
+                    
 
 
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-
-                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
@@ -182,25 +181,7 @@ namespace IQuad2.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    /*
-                    string role = "null";
-
-                    if (model.UserTypeId == 1) {
-
-                        role = "Admin";
-                    }
-                    else if(model.UserTypeId == 2)
-                    {
-                        role = "Doctor";
-                    } else if(model.UserTypeId == 3)
-                    {
-                        role = "Receptionist";
-                    }else
-                    {
-                        role = "Patient";
-                    }
-                    */
-                    await this.UserManager.AddToRoleAsync(user.Id, "Patient");
+                    await this.UserManager.AddToRoleAsync(user.Id, model.UserTypeId);
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
@@ -428,7 +409,7 @@ namespace IQuad2.Controllers
                         await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                         return RedirectToLocal(returnUrl);
                     }
-                }
+                 }
                 AddErrors(result);
             }
 
