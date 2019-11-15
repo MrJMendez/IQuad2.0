@@ -10,9 +10,10 @@ namespace IQuad2.ViewModels
     public class AppointmentViewModel 
     {
         public List<ApplicationUser> Doctors { get; set; }
-        public List<ApplicationUser> Patients { get; set; }
+
+        public string DoctorId { get; set; }
+        public string PatientId { get; set; }
         public Appointment appointment { get; set; }
-        public string PatientName { get; set; }
         
 
      

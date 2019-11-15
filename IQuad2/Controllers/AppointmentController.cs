@@ -15,12 +15,12 @@ namespace IQuad2.Controllers
     public class AppointmentController : Controller
     {
         // GET: Appointment
-        private readonly UserService _userService;
+        private readonly DoctorService _doctorService;
         private readonly AppointmentService _appointmentService;
 
         public AppointmentController()
         {
-            _userService = new UserService();
+            _doctorService = new DoctorService();
             _appointmentService = new AppointmentService();
         }
 
@@ -30,41 +30,46 @@ namespace IQuad2.Controllers
         //}
         public ActionResult Index()
         {
-            IEnumerable<Appointment> appointments = null;
 
-            if (User.IsInRole("Admin"))
-            {
-                 appointments = _appointmentService.GetAppointments();
-                return View("ReadIndex",appointments);
-            }
-            if (User.IsInRole("Doctor"))
-            {
-                appointments = _appointmentService.GetDoctorAppointments(User.Identity.GetUserId());
-                return View("ReadIndex",appointments);
-            }
+            var users = _appointmentService.Users();
 
-            appointments = _appointmentService.GetPatientAppointments(User.Identity.GetUserId());
-
-            return View(appointments);
+            return View(users);
         }
-     
         public ActionResult Set_Appointment()
         {
 
-            var viewModel = _appointmentService.NewView();
+            var viewModel = new AppointmentViewModel {
 
-            return View("AppointmentForm" , viewModel); 
+                Doctors = _doctorService.GetDoctors()
+              
+        };
+
+              return View(viewModel); 
+            
+
         }
-
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Save(Appointment appointment)
+        public ActionResult Create(Appointment appointment)
         {
+            //User.Identity.
+            //Get current logged on user's id. In this case it belongs to the patient
 
-         
             var patientId = User.Identity.GetUserId();
 
             appointment.PatientId = patientId;
+            
+
+            /*var appointment = new Appointment {
+
+                DoctorId = viewModel.DoctorId,
+                PatientId = patientId,
+                Date = viewModel.appointment.Date,
+                PurposeOfVisit = viewModel.appointment.PurposeOfVisit,
+                StartTime = viewModel.appointment.StartTime,
+                EndTime = viewModel.appointment.EndTime
+                
+            };*/
+
 
             _appointmentService.SaveAppointment(appointment);
             return RedirectToAction("Appointment_Set", "Appointment");
@@ -81,30 +86,6 @@ namespace IQuad2.Controllers
 
             return View(appointment);
         }
-
-        [Authorize(Roles ="Patient")]
-        public ActionResult Edit(int id)
-        {
-            var appointment = _appointmentService.AppointEdit(id);
-
-            if(appointment == null)
-            {
-                return HttpNotFound();
-            }
-             
-            var appoint = new AppointmentViewModel
-            {
-                appointment = appointment,  
-                Doctors = _userService.GetDoctors(),
-           
-            };
-
-
-            return View("AppointmentForm", appoint);
-        }
-
-
-
         public ActionResult Appointment_Set()
         {
             /*
