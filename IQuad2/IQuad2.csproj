@@ -174,84 +174,9 @@
     <Compile Include="Controllers\AppointmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910161916376_InitialModel.cs" />
-    <Compile Include="Migrations\201910161916376_InitialModel.Designer.cs">
-      <DependentUpon>201910161916376_InitialModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910181619107_UpdateRegisterEntity.cs" />
-    <Compile Include="Migrations\201910181619107_UpdateRegisterEntity.Designer.cs">
-      <DependentUpon>201910181619107_UpdateRegisterEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910200434369_changesmade.cs" />
-    <Compile Include="Migrations\201910200434369_changesmade.Designer.cs">
-      <DependentUpon>201910200434369_changesmade.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910200437381_ValuesIntoUserType.cs" />
-    <Compile Include="Migrations\201910200437381_ValuesIntoUserType.Designer.cs">
-      <DependentUpon>201910200437381_ValuesIntoUserType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910201859243_UpdateModelPlusViews.cs" />
-    <Compile Include="Migrations\201910201859243_UpdateModelPlusViews.Designer.cs">
-      <DependentUpon>201910201859243_UpdateModelPlusViews.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910222239451_FixingUserTypeAndUsers.cs" />
-    <Compile Include="Migrations\201910222239451_FixingUserTypeAndUsers.Designer.cs">
-      <DependentUpon>201910222239451_FixingUserTypeAndUsers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910231944293_DataIntoUserType.cs" />
-    <Compile Include="Migrations\201910231944293_DataIntoUserType.Designer.cs">
-      <DependentUpon>201910231944293_DataIntoUserType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910240521594_NewTables.cs" />
-    <Compile Include="Migrations\201910240521594_NewTables.Designer.cs">
-      <DependentUpon>201910240521594_NewTables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910282206290_ChangingUserTableByExtendingAspNetUsersWithAdditionalAttributes.cs" />
-    <Compile Include="Migrations\201910282206290_ChangingUserTableByExtendingAspNetUsersWithAdditionalAttributes.Designer.cs">
-      <DependentUpon>201910282206290_ChangingUserTableByExtendingAspNetUsersWithAdditionalAttributes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910282304137_DeletedUserTable.cs" />
-    <Compile Include="Migrations\201910282304137_DeletedUserTable.Designer.cs">
-      <DependentUpon>201910282304137_DeletedUserTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910291756022_updateAppointment.cs" />
-    <Compile Include="Migrations\201910291756022_updateAppointment.Designer.cs">
-      <DependentUpon>201910291756022_updateAppointment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910302201559_ChangeStartTimeAndEndTimeDataType.cs" />
-    <Compile Include="Migrations\201910302201559_ChangeStartTimeAndEndTimeDataType.Designer.cs">
-      <DependentUpon>201910302201559_ChangeStartTimeAndEndTimeDataType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910310215211_RequiredAttributeAddedToFields.cs" />
-    <Compile Include="Migrations\201910310215211_RequiredAttributeAddedToFields.Designer.cs">
-      <DependentUpon>201910310215211_RequiredAttributeAddedToFields.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910310220175_ChangedRequired.cs" />
-    <Compile Include="Migrations\201910310220175_ChangedRequired.Designer.cs">
-      <DependentUpon>201910310220175_ChangedRequired.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910312011533_UserTypeIdToString.cs" />
-    <Compile Include="Migrations\201910312011533_UserTypeIdToString.Designer.cs">
-      <DependentUpon>201910312011533_UserTypeIdToString.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911012002179_Refresh.cs" />
-    <Compile Include="Migrations\201911012002179_Refresh.Designer.cs">
-      <DependentUpon>201911012002179_Refresh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911012015541_refreshagain.cs" />
-    <Compile Include="Migrations\201911012015541_refreshagain.Designer.cs">
-      <DependentUpon>201911012015541_refreshagain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911031909504_MakeUserTypeIdRequired.cs" />
-    <Compile Include="Migrations\201911031909504_MakeUserTypeIdRequired.Designer.cs">
-      <DependentUpon>201911031909504_MakeUserTypeIdRequired.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911031912077_SeedUsersAndRoles.cs" />
-    <Compile Include="Migrations\201911031912077_SeedUsersAndRoles.Designer.cs">
-      <DependentUpon>201911031912077_SeedUsersAndRoles.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -265,9 +190,10 @@
     <Compile Include="Models\UserTypeEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AppointmentService.cs" />
-    <Compile Include="Services\DoctorService.cs" />
+    <Compile Include="Services\UserService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AppointmentViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -275,7 +201,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\jquery.timepicker.css" />
-    <Content Include="Content\pictures\About-image.jpg" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -395,10 +320,12 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
-    <Content Include="Views\Appointment\Set_Appointment.cshtml" />
+    <Content Include="Views\Appointment\AppointmentForm.cshtml" />
     <Content Include="Views\Appointment\Index.cshtml" />
     <Content Include="Views\Appointment\Appointment_Set.cshtml" />
     <Content Include="Views\Appointment\Details.cshtml" />
+    <Content Include="Views\Appointment\Edit.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -415,65 +342,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201910161916376_InitialModel.resx">
-      <DependentUpon>201910161916376_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910181619107_UpdateRegisterEntity.resx">
-      <DependentUpon>201910181619107_UpdateRegisterEntity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910200434369_changesmade.resx">
-      <DependentUpon>201910200434369_changesmade.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910200437381_ValuesIntoUserType.resx">
-      <DependentUpon>201910200437381_ValuesIntoUserType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910201859243_UpdateModelPlusViews.resx">
-      <DependentUpon>201910201859243_UpdateModelPlusViews.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910222239451_FixingUserTypeAndUsers.resx">
-      <DependentUpon>201910222239451_FixingUserTypeAndUsers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910231944293_DataIntoUserType.resx">
-      <DependentUpon>201910231944293_DataIntoUserType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910240521594_NewTables.resx">
-      <DependentUpon>201910240521594_NewTables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910282206290_ChangingUserTableByExtendingAspNetUsersWithAdditionalAttributes.resx">
-      <DependentUpon>201910282206290_ChangingUserTableByExtendingAspNetUsersWithAdditionalAttributes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910282304137_DeletedUserTable.resx">
-      <DependentUpon>201910282304137_DeletedUserTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910291756022_updateAppointment.resx">
-      <DependentUpon>201910291756022_updateAppointment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910302201559_ChangeStartTimeAndEndTimeDataType.resx">
-      <DependentUpon>201910302201559_ChangeStartTimeAndEndTimeDataType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910310215211_RequiredAttributeAddedToFields.resx">
-      <DependentUpon>201910310215211_RequiredAttributeAddedToFields.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910310220175_ChangedRequired.resx">
-      <DependentUpon>201910310220175_ChangedRequired.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910312011533_UserTypeIdToString.resx">
-      <DependentUpon>201910312011533_UserTypeIdToString.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911012002179_Refresh.resx">
-      <DependentUpon>201911012002179_Refresh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911012015541_refreshagain.resx">
-      <DependentUpon>201911012015541_refreshagain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911031909504_MakeUserTypeIdRequired.resx">
-      <DependentUpon>201911031909504_MakeUserTypeIdRequired.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911031912077_SeedUsersAndRoles.resx">
-      <DependentUpon>201911031912077_SeedUsersAndRoles.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
