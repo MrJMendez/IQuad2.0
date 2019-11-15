@@ -46,6 +46,16 @@ namespace IQuad2.Controllers
         public ActionResult Save(Appointment appointment)
         {
 
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new AppointmentViewModel
+                {
+                    appointment = appointment,
+                    Doctors = _userService.GetDoctors()
+                };
+                return View("AppointmentForm", viewModel);
+            }
+           
             var patientId = User.Identity.GetUserId();
 
             appointment.PatientId = patientId;
@@ -77,10 +87,9 @@ namespace IQuad2.Controllers
              
             var appoint = new AppointmentViewModel
             {
-                appointment = appointment,
-               // PatientId =appointment.PatientId,
+                appointment = appointment,  
                 Doctors = _userService.GetDoctors(),
-              //  DoctorId = appointment.DoctorId
+           
             };
 
 

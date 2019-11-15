@@ -21,26 +21,30 @@ namespace IQuad2.Services
         {
             var appointments = _context.appointment.Include(a => a.User).ToList();
 
+
             return appointments;
         }
 
         public AppointmentViewModel NewView()
         {
             var doctors = _context.Users.Where(x => x.UserTypeId == (int)UserTypeEnum.Doctor).ToList();
-
+            var patients = _context.Users.Where(x => x.UserTypeId == (int)UserTypeEnum.Patient).ToList();
             var viewModel = new AppointmentViewModel
             {
                 appointment = new Appointment(),
-                Doctors = doctors
-
+                Doctors = doctors,
+                Patients = patients,
+             
+               
             };
-
+     
             return viewModel;
         }
 
         public void SaveAppointment(Appointment appointment) {
 
-            if(appointment.Id == 0)
+            
+            if (appointment.Id == 0)
             {
                 _context.appointment.Add(appointment);
             }
@@ -48,12 +52,11 @@ namespace IQuad2.Services
             {
                var appointmentInDb = _context.appointment.Single(a => a.Id == appointment.Id); 
                  
-               // appointmentInDb.PatientId = appointment.PatientId;
                 appointmentInDb.PurposeOfVisit = appointment.PurposeOfVisit;
                 appointment.Date = appointment.Date;
                 appointmentInDb.StartTime = appointment.StartTime;
                 appointmentInDb.EndTime = appointment.EndTime;
-                appointment.DoctorId = appointment.DoctorId;
+                appointmentInDb.DoctorId = appointment.DoctorId;
             }
             _context.SaveChanges();
         }

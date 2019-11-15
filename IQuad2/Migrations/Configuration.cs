@@ -28,7 +28,7 @@ namespace IQuad2.Migrations
                 new UserType{ Id= 1, Name="Admin", Description="This particular user has administrative access to the application and can perform managerial and above tasks" },
                 new UserType{ Id= 2, Name="Doctor", Description="This user is a certified medical doctor" },
                 new UserType{ Id= 3, Name="Receptionist", Description="This user is a employee that has been cleared to carry out various operations with patients" },
-                new UserType{ Id= 1, Name="Patient",  Description="This user sets appointments and comes into office for medical checks" },
+                new UserType{ Id= 4, Name="Patient",  Description="This user sets appointments and comes into office for medical checks" },
             };
             userTypes.ForEach(x => context.UserType.AddOrUpdate(y => y.Name, x));
             context.SaveChanges();
