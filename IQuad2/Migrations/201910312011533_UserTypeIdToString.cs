@@ -1,0 +1,18 @@
+namespace IQuad2.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class UserTypeIdToString : DbMigration
+    {
+        public override void Up()
+        {
+            AlterColumn("dbo.AspNetUsers", "UserTypeId", c => c.String());
+        }
+        
+        public override void Down()
+        {
+            AlterColumn("dbo.AspNetUsers", "UserTypeId", c => c.Int(nullable: false));
+        }
+    }
+}
