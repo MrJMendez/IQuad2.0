@@ -15,7 +15,7 @@ namespace IQuad2.Controllers
         {
             _userService = new UserService();
         }
-        
+        [Authorize(Roles = "Admin")]
         public ViewResult Index()
         {
             var users = _userService.GetUsers(); 

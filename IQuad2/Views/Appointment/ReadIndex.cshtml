@@ -13,7 +13,7 @@
 
         <tr>
 
-            <th>Edit</th>
+
             <th>Patient Name</th>
             <th>Purpose Of Visit</th>
             <th>Doctor Name</th>
@@ -26,18 +26,16 @@
     <tbody>
         @foreach (var appointment in Model)
         {
-        <tr>
+            <tr>
 
-            <td>@Html.ActionLink("<==>", "Edit", "Appointment", new { id = appointment.Id }, null) </td>
+                <td>@appointment.Patient.Fname @appointment.Patient.Lname</td>
+                <td>@appointment.PurposeOfVisit</td>
+                <td>@appointment.Doctor.Fname @appointment.Doctor.Lname</td>
+                <td>@appointment.Date.ToLongDateString()</td>
+                <td>@appointment.StartTime.ToLongTimeString()</td>
+                <td>@appointment.EndTime.ToLongTimeString()</td>
 
-            <td>@appointment.Patient.Fname @appointment.Patient.Lname</td>
-            <td>@appointment.PurposeOfVisit</td>
-            <td>@appointment.Doctor.Fname @appointment.Doctor.Lname</td>
-            <td>@appointment.Date.ToLongDateString()</td>
-            <td>@appointment.StartTime.ToLongTimeString()</td>
-            <td>@appointment.EndTime.ToLongTimeString()</td>
-
-        </tr>
+            </tr>
         }
 
     </tbody>
