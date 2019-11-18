@@ -67,6 +67,14 @@ namespace IQuad2.Controllers
             _appointmentService.SaveAppointment(appointment);
             return RedirectToAction("Appointment_Set", "Appointment");
         }
+        [Authorize(Roles = "Patient")]
+        public ActionResult Delete(int id)
+        {
+        
+            _appointmentService.DeleteAppointment(id);
+            return RedirectToAction("Index", "Appointment");
+
+        }
 
         public ActionResult Details(string id)
         {

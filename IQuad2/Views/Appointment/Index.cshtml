@@ -20,6 +20,7 @@
             <th>Date</th>
             <th>Start Time </th>
             <th>End Time</th>
+            <th>Delete</th>
 
         </tr>
     </thead>
@@ -36,6 +37,7 @@
             <td>@appointment.Date.ToLongDateString()</td>
             <td>@appointment.StartTime.ToLongTimeString()</td>
             <td>@appointment.EndTime.ToLongTimeString()</td>
+            <td>@Html.ActionLink("<==>", "Delete", "Appointment", new { id = appointment.Id }, null) </td>
 
         </tr>
         }

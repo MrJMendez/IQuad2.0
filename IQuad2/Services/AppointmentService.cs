@@ -75,6 +75,21 @@ namespace IQuad2.Services
             _context.SaveChanges();
         }
 
+        public void DeleteAppointment(int id)
+        {
+
+            var appointment = _context.appointment.SingleOrDefault(a => a.Id == id);
+
+            if (appointment.Id == id)
+            {
+                _context.appointment.Remove(appointment);
+            }
+            
+            _context.SaveChanges();
+        }
+
+
+
         public IEnumerable<Appointment> AppointDetails(string id)
         {
             var appointment = _context.appointment.ToList().Where(a => a.PatientId == id);
