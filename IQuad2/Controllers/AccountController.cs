@@ -417,7 +417,7 @@ namespace IQuad2.Controllers
                     Street = model.Street,
                     District = model.District,
                     Parish = model.Parish,
-                    UserTypeId = model.UserTypeId
+                    UserTypeId = (int)UserTypeEnum.Patient
                 };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)

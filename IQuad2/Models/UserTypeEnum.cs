@@ -7,7 +7,8 @@ namespace IQuad2.Models
 {
     public enum UserTypeEnum
     {
-        Doctor = 1,
+        Admin = 1,
+        Doctor,
         Secretary,
         Patient
     }

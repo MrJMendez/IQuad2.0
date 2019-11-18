@@ -44,7 +44,7 @@ namespace IQuad2
                 user.District = "Waltham";
                 user.Parish = "Manchester";
                 user.PhoneNumber = "876-318-6436";
-                user.UserTypeId = "Admin";
+                user.UserTypeId = (int)UserTypeEnum.Admin;
               
 
 

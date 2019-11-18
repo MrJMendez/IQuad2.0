@@ -31,8 +31,9 @@ namespace IQuad2.Models
         public string Parish { get; set; }
 
         [Required]
-        public string UserTypeId { get; set; }
+        public int UserTypeId { get; set; }
 
+        public virtual UserType UserType { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
