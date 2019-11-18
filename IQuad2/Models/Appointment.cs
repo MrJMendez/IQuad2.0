@@ -22,7 +22,6 @@ namespace IQuad2.Models
         public string PurposeOfVisit { get; set; }
         [Required]
         public DateTime Date { get; set; }
-
         [Required]
         [Display(Name = "Start Time")]   
         public DateTime StartTime { get; set; }

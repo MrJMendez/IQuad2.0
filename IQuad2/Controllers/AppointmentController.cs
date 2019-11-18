@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.AspNet.Identity;
-using System.Linq;
-using System.Security.Principal;
-using System.Web;
+﻿using Microsoft.AspNet.Identity;
 using System.Web.Mvc;
 using IQuad2.Models;
 using IQuad2.ViewModels;
-using IQuad2.Services;
 
 namespace IQuad2.Controllers
 {
-   
+
     public class AppointmentController : Controller
     {
         // GET: Appointment
@@ -60,6 +54,7 @@ namespace IQuad2.Controllers
         public ActionResult Save(Appointment appointment)
         {
 
+         
             var patientId = User.Identity.GetUserId();
 
             appointment.PatientId = patientId;

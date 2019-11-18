@@ -1,12 +1,14 @@
 ﻿@model IQuad2.ViewModels.AppointmentViewModel
 @{
-    ViewBag.Title = "AppointmentForm";
+    ViewBag.Title = "Set Appointment";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Set Appointment</h2>
-@using (Html.BeginForm("Save", "Appointment"))
+
+<h2>Set_Appointment</h2>
+@using (Html.BeginForm("Create", "Appointment"))
 {
+
 
     <div class="form-group">
 
@@ -44,7 +46,7 @@
     
 
 
-    <button type="submit" class="btn btn-primary">Save Appointment</button>
+    <button type="submit" class="btn btn-primary">Set Appointment</button>
 
     @section scripts{
 
