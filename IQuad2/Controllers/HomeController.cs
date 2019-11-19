@@ -11,11 +11,7 @@ namespace IQuad2.Controllers
         public ActionResult Index()
         {
             return View();
-        }
-        public ActionResult Index2()
-        {
-            return View();
-        }
+        }        
         public ActionResult AddAppointment()
         {
             return View();
@@ -30,6 +26,13 @@ namespace IQuad2.Controllers
         }
 
         public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult Admin()
         {
             ViewBag.Message = "Your contact page.";
 

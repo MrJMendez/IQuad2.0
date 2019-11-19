@@ -1,0 +1,253 @@
+﻿<div class="topbar">
+    <!-- LOGO -->
+    <div class="topbar-left">
+        <a href="/dashboard" class="logo">
+            <span>
+                <img src="~/images/logo-light.png" alt="" height="18">
+            </span>
+            <i>
+                <img src="~/images/logo-sm.png" alt="" height="22">
+            </i>
+        </a>
+    </div>
+
+    <nav class="navbar-custom">
+        <ul class="navbar-right d-flex list-inline float-right mb-0">
+            <li class="dropdown notification-list d-none d-sm-block">
+                <form role="search" class="app-search">
+                    <div class="form-group mb-0">
+                        <input type="text" class="form-control" placeholder="Search..">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+            </li>
+
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    <i class="ti-bell noti-icon"></i>
+                    <span class="badge badge-pill badge-danger noti-icon-badge">3</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+                    <!-- item-->
+                    <h6 class="dropdown-item-text">
+                        Notifications (258)
+                    </h6>
+                    <div class="slimscroll notification-item-list">
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                            <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
+                            <p class="notify-details">Your order is placed<span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-warning"><i class="mdi mdi-message"></i></div>
+                            <p class="notify-details">New Message received<span class="text-muted">You have 87 unread messages</span></p>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-info"><i class="mdi mdi-martini"></i></div>
+                            <p class="notify-details">Your item is shipped<span class="text-muted">It is a long established fact that a reader will</span></p>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-primary"><i class="mdi mdi-cart-outline"></i></div>
+                            <p class="notify-details">Your order is placed<span class="text-muted">Dummy text of the printing and typesetting industry.</span></p>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <div class="notify-icon bg-danger"><i class="mdi mdi-message"></i></div>
+                            <p class="notify-details">New Message received<span class="text-muted">You have 87 unread messages</span></p>
+                        </a>
+                    </div>
+                    <!-- All-->
+                    <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
+                        View all <i class="fi-arrow-right"></i>
+                    </a>
+                </div>
+            </li>
+            <li class="dropdown notification-list">
+                <div class="dropdown notification-list nav-pro-img">
+                    <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <img src="~/images/users/user-4.jpg" alt="user" class="rounded-circle">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                        <!-- item-->
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5"></i> Profile</a>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-wallet m-r-5"></i> My Wallet</a>
+                        <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="mdi mdi-settings m-r-5"></i> Settings</a>
+                        <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline m-r-5"></i> Lock screen</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="#"><i class="mdi mdi-power text-danger"></i> Logout</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="list-inline menu-left mb-0">
+            <li class="float-left">
+                <button class="button-menu-mobile open-left waves-effect">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+            </li>
+            <li class="d-none d-sm-block">
+                <div class="dropdown pt-3 d-inline-block">
+                    <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Create
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="left side-menu">
+    <div class="slimscroll-menu" id="remove-scroll">
+
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu" id="side-menu">
+                <li class="menu-title">Main</li>
+                <li>
+                    <a href="/" class="waves-effect">
+                        <i class="mdi mdi-view-dashboard"></i><span class="badge badge-primary badge-pill float-right">2</span> <span> Dashboard </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Calendar","Dashboard")" class="waves-effect"><i class="mdi mdi-calendar-check"></i><span> Calendar </span></a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-email-outline"></i><span> Email <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                    <ul class="submenu">
+                        <li><a href="/email/inbox">Inbox</a></li>
+                        <li><a href="/email/read">Email Read</a></li>
+                        <li><a href="/email/compose">Email Compose</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-title">Components</li>
+
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-buffer"></i> <span> UI Elements <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
+                    <ul class="submenu">
+                        <li><a href="/ui/alerts">Alerts</a></li>
+                        <li><a href="/ui/buttons">Buttons</a></li>
+                        <li><a href="/ui/badges">Badge</a></li>
+                        <li><a href="/ui/cards">Cards</a></li>
+                        <li><a href="/ui/Carousels">Carousel</a></li>
+                        <li><a href="/ui/dropdowns">Dropdowns</a></li>
+                        <li><a href="/ui/grid">Grid</a></li>
+                        <li><a href="/ui/images">Images</a></li>
+                        <li><a href="/ui/lightbox">Lightbox</a></li>
+                        <li><a href="/ui/Modals">Modals</a></li>
+                        <li><a href="/ui/pagination">Pagination</a></li>
+                        <li><a href="/ui/PopoverTooltips">Popover & Tooltips</a></li>
+                        <li><a href="/dashboard/RangeSlider">Range Slider</a></li>
+                        <li><a href="/dashboard/SessionTimeout">Session Timeout</a></li>
+                        <li><a href="/ui/Progressbars">Progress Bars</a></li>
+                        <li><a href="/ui/SweetAlerts">Sweet-Alert</a></li>
+                        <li><a href="/ui/TabAccordions">Tabs & Accordions</a></li>
+                        <li><a href="/ui/typography">Typography</a></li>
+                        <li><a href="/ui/video">Video</a></li>
+
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-clipboard-outline"></i><span> Forms <span class="badge badge-pill badge-success float-right">6</span> </span></a>
+                    <ul class="submenu">
+                        <li><a href="/forms/elements">Form Elements</a></li>
+                        <li><a href="/forms/validation">Form Validation</a></li>
+                        <li><a href="/forms/advanced">Form Advanced</a></li>
+                        <li><a href="/forms/editors">Form Editors</a></li>
+                        <li><a href="/forms/uploads">Form File Upload</a></li>
+                        <li><a href="/forms/xeditable">Form Xeditable</a></li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-chart-line"></i><span> Charts <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                    <ul class="submenu">
+                        <li><a href="/chart/morris">Morris Chart</a></li>
+                        <li><a href="/chart/chartist">Chartist Chart</a></li>
+                        <li><a href="/chart/chartjs">Chartjs Chart</a></li>
+                        <li><a href="/chart/flot">Flot Chart</a></li>
+                        <li><a href="/chart/c3">C3 Chart</a></li>
+                        <li><a href="/chart/other">Jquery Knob Chart</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted-type"></i><span> Tables <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                    <ul class="submenu">
+                        <li><a href="/table/basic">Basic Tables</a></li>
+                        <li><a href="/table/datatable">Data Table</a></li>
+                        <li><a href="/table/responsive">Responsive Table</a></li>
+                        <li><a href="/table/editable">Editable Table</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-album"></i> <span> Icons  <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></span> </a>
+                    <ul class="submenu">
+                        <li><a href="/icon/material">Material Design</a></li>
+                        <li><a href="/icon/ion">Ion Icons</a></li>
+                        <li><a href="/icon/fontawesome">Font Awesome</a></li>
+                        <li><a href="/icon/themify">Themify Icons</a></li>
+                        <li><a href="/icon/dripicons">Dripicons</a></li>
+                        <li><a href="/icon/typicons">Typicons Icons</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-google-maps"></i><span> Maps <span class="badge badge-pill badge-danger float-right">2</span> </span></a>
+                    <ul class="submenu">
+                        <li><a href="/maps/google"> Google Map</a></li>
+                        <li><a href="/maps/vector"> Vector Map</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-title">Extras</li>
+
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-location"></i><span> Authentication <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                    <ul class="submenu">
+                        <li><a href="/pages/login">Login</a></li>
+                        <li><a href="/pages/register">Register</a></li>
+                        <li><a href="/pages/RecoverPassword">Recover Password</a></li>
+                        <li><a href="/pages/lockscreen">Lock Screen</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-google-pages"></i><span> Extra Pages <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                    <ul class="submenu">
+                        <li><a href="/pages/timeline">Timeline</a></li>
+                        <li><a href="/pages/invoice">Invoice</a></li>
+                        <li><a href="/pages/directory">Directory</a></li>
+                        <li><a href="/pages/blank">Blank Page</a></li>
+                        <li><a href="/pages/BadRequest">Error 404</a></li>
+                        <li><a href="/pages/InternalServerError">Error 500</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+        <!-- Sidebar -->
+        <div class="clearfix"></div>
+
+    </div>
+    <!-- Sidebar -left -->
+
+</div>

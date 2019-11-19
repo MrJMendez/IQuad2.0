@@ -15,9 +15,11 @@
                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 <li>@Html.ActionLink("Appointments", "Index", "Appointment")</li>
 
+
                 @{
                     if (User.IsInRole("Admin"))
                     {
+                        <li>@Html.ActionLink("Admin", "Index", "Appointment")</li>
                         <li>@Html.ActionLink("Users", "Index", "User")</li>
 
                     }

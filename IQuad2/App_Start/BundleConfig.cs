@@ -9,7 +9,12 @@ namespace IQuad2
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/bootstrap.bundle.min.js",
+                        "~/Scripts/metisMenu.min.js",
+                        "~/Scripts/jquery.slimscroll.js",
+                        "~/Scripts/waves.min.js",
+                        "~/plugins/jquery-sparkline/jquery.sparkline.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -20,11 +25,14 @@ namespace IQuad2
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js"));        
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/metismenu.min.css",
+                      "~/Content/icons.css",
+                      "~/Content/style.css",
+                      "~/Content/Site.css"));
         }
     }
 }
