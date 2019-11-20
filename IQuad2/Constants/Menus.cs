@@ -6,7 +6,9 @@ namespace IQuad2.Contants
     {
         public static readonly IDictionary<string, string> controllers = new Dictionary<string, string>()
         {
-            { "home", "The home page" },
+            {"admin", "Admin home page" },
+            {"login", "Admin Login" },
+            {"adminaccount", "Admin Register"},
             { "dashboard", "More"},
             { "ui", "UI Elements" },
             { "icon", "Icons" },
@@ -20,7 +22,9 @@ namespace IQuad2.Contants
 
         public static readonly IDictionary<string, string> actions = new Dictionary<string, string>()
         {
-            {"admin", "Admin Test Page" },
+            {"index", "Admin Test Page" },
+             {"login", "Admin LogIn" },
+            {"register", "Registration" },
 
             { "inbox", "Inbox" },
             { "email", "Email Read" },

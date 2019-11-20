@@ -29,7 +29,7 @@ namespace IQuad2.Models
         [Required]
         [StringLength(255)]
         public string Parish { get; set; }
-        public string UserTypeId { get; set; }
+        public int UserTypeId { get; set; }
     }
 
     public class ExternalLoginListViewModel
@@ -111,7 +111,7 @@ namespace IQuad2.Models
 
         [Required]
         [Display(Name ="User Role")]
-        public string UserTypeId { get; set; }
+        public int UserTypeId { get; set; }
 
         [Required]
         [EmailAddress]
