@@ -13,7 +13,23 @@
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
                 <li>@Html.ActionLink("About", "About", "Home")</li>
                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                <li>@Html.ActionLink("Appointments", "Index", "Appointment")</li>
+
+                <li class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Appointment Queries
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("View Appointments", "Index", "Appointment")</li>
+
+                        <li>@Html.ActionLink("Set Appointment", "Set_Appointment", "Appointment")</li>
+
+                    </ul>
+                </li>
+                     
+
+
+
 
 
                 @{
