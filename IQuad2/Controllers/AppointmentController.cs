@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace IQuad2.Controllers
 {
-
+    [Authorize]
     public class AppointmentController : Controller
     {
         // GET: Appointment
@@ -19,11 +19,6 @@ namespace IQuad2.Controllers
             _userService = new UserService();
             _appointmentService = new AppointmentService();
         }
-
-        //protected override void Dispose(bool disposing)
-        //{
-        //    _context.Dispose(); 
-        //}
         public ActionResult Index()
         {
             IEnumerable<Appointment> appointments = null;
@@ -67,10 +62,8 @@ namespace IQuad2.Controllers
         [Authorize(Roles = "Patient")]
         public ActionResult Delete(int id)
         {
-        
             _appointmentService.DeleteAppointment(id);
             return RedirectToAction("Index", "Appointment");
-
         }
 
         public ActionResult Details(string id)
@@ -104,32 +97,9 @@ namespace IQuad2.Controllers
             return View("AppointmentForm", appoint);
         }
 
-
-
         public ActionResult Appointment_Set()
         {
-            /*
-            Appointment cAppointment = new Appointment();
-
-            cAppointment = _appointmentService.Edit(User.Identity.GetUserId());
-            
-            if(cAppointment == null)
-            {
-                return HttpNotFound();
-            }
-
-            AppointmentViewModel appointment = new AppointmentViewModel
-            {
-                appointment = cAppointment,
-                PatientId = User.Identity.GetUserId(),
-                Doctors = _doctorService.GetDoctors(),
-                DoctorId = cAppointment.DoctorId
-            };
-                */
-
-            return View(/*appointment*/);
+            return View();
         }
-      
-        
     }
 }

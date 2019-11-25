@@ -54,7 +54,6 @@ namespace IQuad2.Services
      
             return viewModel;
         }
-
         public void SaveAppointment(Appointment appointment) {
 
             
@@ -74,7 +73,6 @@ namespace IQuad2.Services
             }
             _context.SaveChanges();
         }
-
         public void DeleteAppointment(int id)
         {
 
@@ -87,8 +85,6 @@ namespace IQuad2.Services
             
             _context.SaveChanges();
         }
-
-
 
         public IEnumerable<Appointment> AppointDetails(string id)
         {

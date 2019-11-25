@@ -11,11 +11,11 @@ namespace IQuad2.Models
     {
         [Required]
         public int Id { get; set; }
-        [Required]
+      
         public string PatientId { get; set; }
         
         public virtual ApplicationUser Patient { get; set; }
-        
+        [Required]
         public string DoctorId { get; set; }
         public virtual ApplicationUser Doctor { get; set; }
         [Display(Name = "Purpose of Visit")]
