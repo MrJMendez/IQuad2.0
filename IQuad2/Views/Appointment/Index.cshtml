@@ -7,40 +7,40 @@
 
 <h2>Appointments</h2>
 
+<div class="bk">
+    <table id="appointment" class="table table-bordered table-hover">
+        <thead>
 
-<table id="appointment" class="table table-bordered table-hover">
-    <thead>
+            <tr>
+                <th>Edit</th>
+                <th>Patient Name</th>
+                <th>Purpose Of Visit</th>
+                <th>Doctor Name</th>
+                <th>Date</th>
+                <th>Start Time </th>
+                <th>End Time</th>
+                <th>Delete</th>
 
-        <tr>
-            <th>Edit</th>
-            <th>Patient Name</th>
-            <th>Purpose Of Visit</th>
-            <th>Doctor Name</th>
-            <th>Date</th>
-            <th>Start Time </th>
-            <th>End Time</th>
-            <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var appointment in Model)
+            {
+                <tr>
 
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var appointment in Model)
-        {
-        <tr>
+                    <td>@Html.ActionLink("<==>", "Edit", "Appointment", new { id = appointment.Id }, null) </td>
 
-            <td>@Html.ActionLink("<==>", "Edit", "Appointment", new { id = appointment.Id }, null) </td>
+                    <td>@appointment.Patient.Fname @appointment.Patient.Lname</td>
+                    <td>@appointment.PurposeOfVisit</td>
+                    <td>@appointment.Doctor.Fname @appointment.Doctor.Lname</td>
+                    <td>@appointment.Date.ToLongDateString()</td>
+                    <td>@appointment.StartTime.ToLongTimeString()</td>
+                    <td>@appointment.EndTime.ToLongTimeString()</td>
+                    <td>@Html.ActionLink("<==>", "Delete", "Appointment", new { id = appointment.Id }, null) </td>
 
-            <td>@appointment.Patient.Fname @appointment.Patient.Lname</td>
-            <td>@appointment.PurposeOfVisit</td>
-            <td>@appointment.Doctor.Fname @appointment.Doctor.Lname</td>
-            <td>@appointment.Date.ToLongDateString()</td>
-            <td>@appointment.StartTime.ToLongTimeString()</td>
-            <td>@appointment.EndTime.ToLongTimeString()</td>
-            <td>@Html.ActionLink("<==>", "Delete", "Appointment", new { id = appointment.Id }, null) </td>
+                </tr>
+            }
 
-        </tr>
-        }
-
-    </tbody>
-</table>
-
+        </tbody>
+    </table>
+</div>
