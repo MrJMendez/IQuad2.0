@@ -7,31 +7,31 @@
 
 <h2>Users</h2>
 
+<div class="bk">
+    <table id="user" class="table table-bordered table-hover">
+        <thead>
 
-<table id="user" class="table table-bordered table-hover">
-    <thead>
+            <tr class="bkg">
 
-        <tr>
-           
-            <th>First Name</th>
-            <th>First Lame</th>
-            <th>User Type</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>User Type</th>
 
 
-        </tr>
-
-    </thead>
-    <tbody>
-        @foreach (var users in Model)
-        {
-            <tr>
-               
-                <td>@users.Fname</td>
-                <td>@users.Lname</td>
-                <td>@users.UserType.Name</td>
             </tr>
-        }
 
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var users in Model)
+            {
+                <tr>
 
+                    <td>@users.Fname</td>
+                    <td>@users.Lname</td>
+                    <td>@users.UserType.Name</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

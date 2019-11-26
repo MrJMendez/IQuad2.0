@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -21,30 +25,31 @@
             <div class="container">
                 <div class="row mb-5 element-animate">
                     <div class="col-md-3 mb-5">
-                        <h3>Services</h3>
+                        <h3><i class="glyphicon glyphicon-tasks"></i> Services</h3>
                         <ul class="footer-link list-unstyled">
-                            <li><a href="#">Find a doctor</a></li>
-                            <li><a href="#">Procedures &amp; Treatments</a></li>
-                            <li><a href="#">Online Services</a></li>
+                            <li>@Html.ActionLink("View Appointments", "Index", "Appointment")</li>
+
+                            <li>@Html.ActionLink("Set an Appointment", "Set_Appointment", "Appointment")</li>
                         </ul>
                     </div>
                     <div class="col-md-3 mb-5">
-                        <h3>Latest News</h3>
+                        <h3><span class="glyphicon glyphicon-list-alt"></span>  Latest News</h3>
                         <ul class="footer-link list-unstyled">
                             <li><a href="https://edition.cnn.com/health">Health Care Professional News</a></li>
                             <li><a href="#">Events &amp; Conferences</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 mb-5">
-                        <h3>About</h3>
+                          <h3> <span class="glyphicon glyphicon-user"></span> Developers</h3>
                         <ul class="footer-link list-unstyled">
-                            @Html.ActionLink("About", "About", "Home")
-                            <li><a href="#">Feedback</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li>Johnoy Mendez</li>
+                            <li>Raheem Robinson</li>
+                            <li>Berthel Whyte</li>
+                            <li>Hakeem Gooden</li>
                         </ul>
                     </div>
                     <div class="col-md-3 mb-5">
-                        <h3>Location &amp; Contact</h3>
+                        <h3><i class="glyphicon glyphicon-map-marker"></i> Location &amp; Contact</h3>
                         <p></p>
                         <p class="mb-5"> <b>Address:</b> 123 White Hall,Kingston 5, Jamaica</p>
 
