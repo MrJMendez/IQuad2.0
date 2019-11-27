@@ -43,13 +43,26 @@ textarea {
     .bk table thead tr th {
         color: #7ECC78;
         font-weight: bold;
-        font-size:2
+        text-align: center;
     }
-    .bk table tbody tr td,
-    .bk table tbody tr td a {
+.bk table tbody tr td,
+.bk table tbody tr td a {
         color:white;
+        
+}
+
+
+a.my-class {
+    color: #333333
+}
+
+ a.my-class:active {
+        color: #666666
     }
 
-.bkg{
-    text-decoration-color:white;
-}
+ a.my-class:link {
+        color: #999999
+    }
+a.my-class:visited {
+        color: #CCCCCC
+    }
