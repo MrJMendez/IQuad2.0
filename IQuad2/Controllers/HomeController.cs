@@ -12,11 +12,7 @@ namespace IQuad2.Controllers
         {
             return View();
         }        
-        public ActionResult AddAppointment()
-        {
-            return View();
-        }
-
+     
 
         public ActionResult About()
         {

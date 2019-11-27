@@ -9,6 +9,7 @@ using IQuad2.Models;
 
 namespace IQuad2.Controllers
 {
+    [Authorize]
     public class RolesController : Controller
     {
         // GET: Roles
@@ -58,6 +59,7 @@ namespace IQuad2.Controllers
 
         public ActionResult Delete(string RoleName)
         {
+
             var context = new Models.ApplicationDbContext();
             var thisRole = context.Roles.Where(r => r.Name.Equals(RoleName, StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
             context.Roles.Remove(thisRole);
