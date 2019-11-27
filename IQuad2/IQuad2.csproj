@@ -283,6 +283,7 @@
     <Content Include="Images\users\user-9.jpg" />
     <Content Include="Pictures\About-image.jpg" />
     <Content Include="Pictures\aboutus1.jpg" />
+    <Content Include="Pictures\appointment.jpg" />
     <Content Include="Pictures\appointment.png" />
     <Content Include="Pictures\clock.png" />
     <Content Include="Pictures\contactus.png" />
