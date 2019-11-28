@@ -106,10 +106,29 @@ namespace IQuad2.Controllers
             }
 
             ApplicationUser user = context.Users.Where(u => u.UserName.Equals(UserName, StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
-
+            /* if(user.UserTypeId != 0)
+         {
+             throw new ArgumentNullException("Role", "User Cannot have more than one role.");
+         }*/
             var userStore = new UserStore<ApplicationUser>(context);
             var userManager = new UserManager<ApplicationUser>(userStore);
             userManager.AddToRole(user.Id, RoleName);
+
+            /*  if(RoleName == "Admin")
+          {
+              user.UserTypeId = 1;
+          }else if(RoleName== "Doctor")
+          {
+              user.UserTypeId = 2;
+          } else if(RoleName == "Receptionist")
+          {
+              user.UserTypeId = 3;
+          }
+          else
+          {
+              user.UserTypeId = 4; 
+          }*/
+
 
 
             ViewBag.Message = "Role created successfully !";
@@ -167,6 +186,7 @@ namespace IQuad2.Controllers
             if (userManager.IsInRole(user.Id, RoleName))
             {
                 userManager.RemoveFromRole(user.Id, RoleName);
+                // user.UserTypeId = 0;
                 ViewBag.Message = "Role removed from this user successfully !";
             }
             else

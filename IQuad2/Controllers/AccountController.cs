@@ -166,8 +166,7 @@ namespace IQuad2.Controllers
                     Street = model.Street,
                     District = model.District,
                     Parish = model.Parish,
-                    UserTypeId = 4,
-
+                    UserTypeId = (int)UserTypeEnum.Patient,
 
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
@@ -182,26 +181,9 @@ namespace IQuad2.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    /*
-                    string role = "null";
-
-                    if (model.UserTypeId == 1) {
-
-                        role = "Admin";
-                    }
-                    else if(model.UserTypeId == 2)
-                    {
-                        role = "Doctor";
-                    } else if(model.UserTypeId == 3)
-                    {
-                        role = "Receptionist";
-                    }else
-                    {
-                        role = "Patient";
-                    } */
 
                     await this.UserManager.AddToRoleAsync(user.Id, "Patient");
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Login", "Account");
                 }
                 AddErrors(result);
             }

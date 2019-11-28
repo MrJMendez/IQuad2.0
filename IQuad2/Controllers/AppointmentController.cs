@@ -50,8 +50,6 @@ namespace IQuad2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Save(Appointment appointment)
         {
-
-         
             var patientId = User.Identity.GetUserId();
 
             appointment.PatientId = patientId;
