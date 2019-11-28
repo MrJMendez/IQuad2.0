@@ -23,11 +23,11 @@
         </div>
         <div class="form-group">
 
-        @Html.LabelFor(m => m.appointment.StartTime)
-        @Html.TextBoxFor(m => m.appointment.StartTime,  new { @class = "form-control timepicker", required = "required"})
-        @Html.ValidationMessageFor(m => m.appointment.StartTime)
-    </div>
-    <div class="form-group">
+            @Html.LabelFor(m => m.appointment.StartTime)
+            @Html.TextBoxFor(m => m.appointment.StartTime, new { @class = "form-control timepicker", required = "required" })
+            @Html.ValidationMessageFor(m => m.appointment.StartTime)
+        </div>
+        <div class="form-group">
 
             @Html.LabelFor(m => m.appointment.EndTime)
             @Html.TextBoxFor(m => m.appointment.EndTime, new { @class = "form-control timepicker" })
@@ -69,17 +69,18 @@
 
                     });
 
-            });
-            $(document).ready(function () {
-                $('input.timepicker').timepicker({
                 });
-            });
+                $(document).ready(function () {
+                    $('input.timepicker').timepicker({
+                    });
+                });
 
             </script>
         }
     }
 </div>
 
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
 
 
