@@ -13,6 +13,7 @@ namespace IQuad2.Controllers
     public class RolesController : Controller
     {
         // GET: Roles
+        [Authorize(Roles = ("Admin"))]
         public ActionResult Index()
         { 
             // Populate Dropdown Lists
@@ -30,11 +31,12 @@ namespace IQuad2.Controllers
 
             return View();
         }
+        [Authorize(Roles = ("Admin"))]
         public ActionResult Create()
         {
             return View();
         }
-
+        [Authorize(Roles = ("Admin"))]
         // POST: /Roles/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
@@ -56,7 +58,7 @@ namespace IQuad2.Controllers
                 return View();
             }
         }
-
+        [Authorize(Roles = ("Admin"))]
         public ActionResult Delete(string RoleName)
         {
 
@@ -66,7 +68,7 @@ namespace IQuad2.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        [Authorize(Roles = ("Admin"))]
         // GET: /Roles/Edit/5
         public ActionResult Edit(string roleName)
         {
@@ -75,7 +77,7 @@ namespace IQuad2.Controllers
 
             return View(thisRole);
         }
-
+        [Authorize(Roles = ("Admin"))]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Microsoft.AspNet.Identity.EntityFramework.IdentityRole role)
@@ -93,6 +95,7 @@ namespace IQuad2.Controllers
                 return View();
             }
         }
+        [Authorize(Roles = ("Admin"))]
         //  Adding Roles to a user
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -145,6 +148,7 @@ namespace IQuad2.Controllers
 
         //Getting a List of Roles for a User
         [HttpPost]
+        [Authorize(Roles = ("Admin"))]
         [ValidateAntiForgeryToken]
         public ActionResult GetRoles(string UserName)
         {
@@ -173,6 +177,7 @@ namespace IQuad2.Controllers
         //Deleting a User from A Role
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = ("Admin"))]
         public ActionResult DeleteRoleForUser(string UserName, string RoleName)
         {
             var account = new AccountController();

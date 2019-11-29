@@ -10,6 +10,7 @@ namespace IQuad2.Controllers
     public class AdminController : Controller
     {
         // GET: Admin
+        [Authorize(Roles=("Admin"))]
         public ActionResult Index()
         {
             ViewBag.Message = "Your Admin page.";
