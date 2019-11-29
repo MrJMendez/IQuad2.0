@@ -4,36 +4,37 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Set Appointment</h2>
+
 <div class="bg">
+    <h2 style="margin-left:10px;" >Set Appointment</h2>
     @using (Html.BeginForm("Save", "Appointment"))
     {
 
-        <div class="form-group">
+        <div style="margin-left:10px;" class="form-group">
 
             @Html.LabelFor(m => m.appointment.PurposeOfVisit)
             @Html.TextAreaFor(m => m.appointment.PurposeOfVisit, new { @class = "form-control" })
 
         </div>
-        <div class="form-group">
+        <div style="margin-left:10px;" class="form-group">
 
             @Html.LabelFor(m => m.appointment.Date)
             @Html.TextBoxFor(m => m.appointment.Date, "{0:d MMM yyyy}", new { @class = "form-control date-picker" })
             @Html.ValidationMessageFor(m => m.appointment.Date)
         </div>
-        <div class="form-group">
+        <div style="margin-left:10px;" class="form-group">
 
             @Html.LabelFor(m => m.appointment.StartTime)
             @Html.TextBoxFor(m => m.appointment.StartTime, new { @class = "form-control timepicker", required = "required" })
             @Html.ValidationMessageFor(m => m.appointment.StartTime)
         </div>
-        <div class="form-group">
+        <div style="margin-left:10px;" class="form-group">
 
             @Html.LabelFor(m => m.appointment.EndTime)
             @Html.TextBoxFor(m => m.appointment.EndTime, new { @class = "form-control timepicker" })
             @Html.ValidationMessageFor(m => m.appointment.EndTime)
         </div>
-        <div class="form-group">
+        <div style="margin-left:10px;" class="form-group">
 
             <label>Doctors</label>
             @Html.DropDownListFor(m => m.appointment.DoctorId, new SelectList(Model.Doctors, "Id", "Fname"), "Select Doctor", new { @class = "form-control" })
@@ -45,7 +46,7 @@
 
 
 
-        <button type="submit" class="btn btn-primary">Save Appointment</button>
+        <button style="margin-left:10px;" type="submit" class="btn btn-primary">Save Appointment</button>
 
         @section scripts{
 
@@ -79,8 +80,6 @@
         }
     }
 </div>
-
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
 
 

@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Appointments</h2>
+<h2>Your Appointments</h2>
 
 <div class="bk">
     <table id="appointment" class="table table-bordered table-hover">
@@ -28,7 +28,7 @@
             {
                 <tr>
 
-                    <td><a href=@Url.Action("Edit", "Appointment", new { id = appointment.Id }, null)><span class="glyphicon glyphicon-edit"></span></a> </td>
+                    <td ><a href=@Url.Action("Edit", "Appointment", new { id = appointment.Id }, null)><span class="glyphicon glyphicon-edit"></span></a> </td>
 
                     <td>@appointment.Patient.Fname @appointment.Patient.Lname</td>
                     <td>@appointment.PurposeOfVisit</td>

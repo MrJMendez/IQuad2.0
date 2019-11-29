@@ -15,10 +15,10 @@
                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                
                 <li class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">
                         Appointment Queries
                         <span class="caret"></span>
-                    </button>
+                    </a>
                     <ul class="dropdown-menu">
                         <li>@Html.ActionLink("View Appointments", "Index", "Appointment")</li>
 
@@ -35,7 +35,7 @@
                 @{
                     if (User.IsInRole("Admin"))
                     {
-                        <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+                        <li>@Html.ActionLink("User Role", "Index", "Roles")</li>
                         <li>@Html.ActionLink("Users", "Index", "User")</li>
 
                     }

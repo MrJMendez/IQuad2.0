@@ -3,12 +3,8 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<div class="row col-sm-12 col-lg-12 col-md-12">
- 
-    <br />
-</div>
 
-<div class="row col-sm-12 col-lg-12 col-md-12">
+<div class="row col-sm-12 col-lg-12 col-md-12 bk-1">
 
 
     <div class="col-sm-6 col-lg-6 col-md-6">
@@ -36,7 +32,9 @@
 
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h4>Create A New Role</h4>
+                <div class="add">
+                    <h4>Create A New Role</h4>
+                </div>
             </div>
             <div class="panel-body">
                 @using (Html.BeginForm("Create", "Roles", new { @class = "form-horizontal" }))

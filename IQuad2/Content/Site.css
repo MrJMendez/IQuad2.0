@@ -36,6 +36,15 @@ textarea {
     background-color:#2A363B;
    
 }
+.bga{
+    background-color:#2B3A4A;
+}
+
+.bkga{
+
+    background-image:url(Pictures/admin.jpg)
+  
+ }
 .bk table tbody tr:hover{
     background-color:#7A6FBE;
 
@@ -46,10 +55,9 @@ textarea {
         text-align: center;
     }
 .bk table tbody tr td,
-.bk table tbody tr td a {
-        color:white;
-        
-}
+.bk table tbody tr td a{
+    color: white;
+ }
 
 
 a.my-class {
@@ -66,3 +74,13 @@ a.my-class {
 a.my-class:visited {
         color: #CCCCCC
     }
+.appt a {
+    color:white;
+}
+.bk-1 .panel-heading {
+    background-color: #2A363B;
+    color: #7ECC78;
+}
+.bk-1 .panel-primary {
+    border: solid 1px #2A363B;
+}
