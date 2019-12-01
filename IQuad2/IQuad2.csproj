@@ -293,6 +293,7 @@
     <Content Include="Pictures\doc22.png" />
     <Content Include="Pictures\doc33.png" />
     <Content Include="Pictures\doc44.png" />
+    <Content Include="Pictures\favicon.png" />
     <Content Include="Pictures\icon3_0000_.jpg" />
     <Content Include="Pictures\icon3_0001_.jpg" />
     <Content Include="Pictures\icon3_0003_.jpg" />
