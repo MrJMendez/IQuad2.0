@@ -66,7 +66,7 @@ namespace IQuad2.Services
                var appointmentInDb = _context.appointment.Single(a => a.Id == appointment.Id); 
                  
                 appointmentInDb.PurposeOfVisit = appointment.PurposeOfVisit;
-                appointment.Date = appointment.Date;
+                appointmentInDb.Date = appointment.Date;
                 appointmentInDb.StartTime = appointment.StartTime;
                 appointmentInDb.EndTime = appointment.EndTime;
                 appointmentInDb.DoctorId = appointment.DoctorId;
