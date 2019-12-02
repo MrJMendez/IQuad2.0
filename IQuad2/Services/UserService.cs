@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
+using System.Web.Security;
+using IQuad2.ViewModels;
 
 namespace IQuad2.Services
 {
@@ -15,10 +17,32 @@ namespace IQuad2.Services
             _context = new ApplicationDbContext();
         }
 
-        public List<ApplicationUser> GetUsers()
+        public List<UserVm> GetUsers()
         {
-            var users = _context.Users.Include(u => u.UserType).ToList();
-            return users;
+            var users = _context.Users.ToList();
+            var result = new List<UserVm>();
+            foreach(var x in users)
+            {
+                var user = new UserVm();
+               
+                foreach( var r in x.Roles.ToList())
+                {
+                  var role =  _context.Roles.FirstOrDefault(a => a.Id == r.RoleId);
+                    if (role != null)
+                    {
+                        user.RolesString.Add(role.Name);
+                    }
+                   
+                   
+                };
+
+                user.user=x;
+
+                result.Add(user);
+               
+            }
+            return result;
+           
         }
 
         public List<ApplicationUser> GetDoctors() {
@@ -27,4 +51,5 @@ namespace IQuad2.Services
         }
        
     }
+   
 }

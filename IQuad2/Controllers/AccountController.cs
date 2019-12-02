@@ -172,6 +172,7 @@ namespace IQuad2.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    await this.UserManager.AddToRoleAsync(user.Id, "Patient");
 
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
@@ -182,7 +183,7 @@ namespace IQuad2.Controllers
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
 
-                    await this.UserManager.AddToRoleAsync(user.Id, "Patient");
+                    
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);

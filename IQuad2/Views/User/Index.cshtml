@@ -1,4 +1,4 @@
-﻿@model IEnumerable<IQuad2.Models.ApplicationUser>
+﻿@model IEnumerable<IQuad2.ViewModels.UserVm>
 
 @{
     ViewBag.Title = "user";
@@ -23,12 +23,12 @@
 
         </thead>
         <tbody>
-            @foreach (var users in Model)
+            @foreach (var result in Model)
             {
                 <tr>
-                    <td>@users.Fname</td>
-                    <td>@users.Lname</td>
-                    <td>@users.UserType.Name</td>
+                    <td>@result.user.Fname</td>
+                    <td>@result.user.Lname</td>
+                    <td>@String.Join(" | ", @result.RolesString)</td>
                 </tr>
             }
 
