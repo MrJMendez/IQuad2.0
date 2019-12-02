@@ -51,6 +51,7 @@ namespace IQuad2.Controllers
         public ActionResult Save(Appointment appointment)
         {
             var patientId = User.Identity.GetUserId();
+           
 
             appointment.PatientId = patientId;
 
