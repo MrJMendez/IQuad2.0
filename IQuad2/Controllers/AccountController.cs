@@ -183,7 +183,7 @@ namespace IQuad2.Controllers
 
 
                     await this.UserManager.AddToRoleAsync(user.Id, "Patient");
-                    return RedirectToAction("Login", "Account");
+                    return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }

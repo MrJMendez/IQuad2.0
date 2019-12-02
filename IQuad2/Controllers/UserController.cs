@@ -19,6 +19,7 @@ namespace IQuad2.Controllers
         public ViewResult Index()
         {
             var users = _userService.GetUsers(); 
+
             return View(users);
         }
 
