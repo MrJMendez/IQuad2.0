@@ -28,6 +28,11 @@ namespace IQuad2.Controllers
                 appointments = _appointmentService.GetAppointments();
                 return View("ReadIndex", appointments);
             }
+            if (User.IsInRole("Receptionist"))
+            {
+                appointments = _appointmentService.GetAppointments();
+                return View("Index", appointments);
+            }
             if (User.IsInRole("Doctor"))
             {
                 appointments = _appointmentService.GetDoctorAppointments(User.Identity.GetUserId());
@@ -58,7 +63,7 @@ namespace IQuad2.Controllers
             _appointmentService.SaveAppointment(appointment);
             return RedirectToAction("Appointment_Set", "Appointment");
         }
-        [Authorize(Roles = "Patient")]
+        [Authorize(Roles = "Patient, Receptionist")]
         public ActionResult Delete(int id)
         {
             _appointmentService.DeleteAppointment(id);
@@ -76,7 +81,7 @@ namespace IQuad2.Controllers
 
             return View(appointment);
         }
-        [Authorize(Roles = "Patient")]
+        [Authorize(Roles = "Patient, Receptionist")]
         public ActionResult Edit(int id)
         {
             var appointment = _appointmentService.AppointEdit(id);
